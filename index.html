@@ -7,13 +7,13 @@
   <meta name="description" content="Practical coaching for ADHD and neurodivergent professionals. Stop restarting the same broken week." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ── Fineprint global override: readable on all pages ── */
     .fineprint {
       font-size: 14px !important;
-      color: #445566 !important;
+      color: #2c3e52 !important;
       line-height: 1.55;
       margin-top: 12px;
     }
@@ -33,7 +33,7 @@
       --amber:  #E8A800;
       --cream:  #FFFFFF;
       --white:  #FFFFFF;
-      --muted:  #445566;
+      --muted:  #2c3e52;
       --border: rgba(255,255,255,0.10);
       --border-light: rgba(11,31,58,0.10);
 
@@ -51,7 +51,7 @@
     body {
       font-family: var(--font-sans);
       background: var(--cream);
-      color: var(--navy);
+      color: #000000;
       font-size: 17px;
       line-height: 1.7;
       overflow-x: hidden;
@@ -434,7 +434,7 @@
     .stat-desc {
       font-size: 18px;
       font-weight: 500;
-      color: #1a2f4a;
+      color: #0d1e30;
       max-width: 180px;
       margin: 10px auto 0;
       line-height: 1.55;
@@ -449,18 +449,19 @@
 
     .section-eyebrow {
       font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
+      font-weight: 700;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
-      color: var(--teal);
+      color: #0B1F3A;
       margin-bottom: 12px;
     }
 
     .section-title {
-      font-family: var(--font-serif);
-      font-size: clamp(34px, 4vw, 52px);
-      color: var(--navy);
-      line-height: 1.12;
+      font-family: var(--font-sans);
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 700;
+      color: #000000 !important;
+      line-height: 1.15;
       letter-spacing: -0.02em;
       margin-bottom: 16px;
     }
@@ -521,7 +522,7 @@
 
     .pain-card p {
       font-size: 18px;
-      color: #1e3347;
+      color: #1a2d42;
       line-height: 1.8;
     }
 
@@ -529,6 +530,7 @@
        PROGRAM SECTION
     ============================================================ */
     .program-section {
+      padding-bottom: 160px;
       background: var(--navy);
       padding: 96px 0;
       position: relative;
@@ -554,7 +556,7 @@
     }
 
     .program-section .section-eyebrow { color: var(--amber); }
-    .program-section .section-title { color: var(--white); }
+    .program-section .section-title { color: #ffffff !important; }
     .program-section .section-sub { color: rgba(255,255,255,0.95); }
 
     .program-features {
@@ -657,7 +659,7 @@
     /* ============================================================
        PILLARS
     ============================================================ */
-    .pillars-section { background: #F5F3EE; }
+    .pillars-section { background: #ffffff; }
 
     .pillars-grid {
       display: grid;
@@ -690,20 +692,20 @@
       font-family: var(--font-serif);
       font-size: 24px;
       font-weight: 700;
-      color: #0B1F3A;
+      color: #071428;
       margin-bottom: 14px;
     }
 
     .pillar p {
-      font-size: 18px;
-      color: #1e3347;
+      font-size: 17px;
+      color: #0d1e30;
       line-height: 1.8;
     }
 
     /* ============================================================
        TESTIMONIALS
     ============================================================ */
-    .testimonials-section { background: var(--white); }
+    .testimonials-section { background: #F7F5F0; }
 
     .testi-grid {
       display: grid;
@@ -712,11 +714,11 @@
     }
 
     .testi-card {
-      background: #F8F8F6;
+      background: #ffffff;
       border: 1px solid rgba(11,31,58,0.10);
       border-radius: var(--radius);
       padding: 36px 32px;
-      box-shadow: 0 4px 20px rgba(11,31,58,0.06);
+      box-shadow: 0 4px 20px rgba(11,31,58,0.08);
     }
 
     .testi-quote {
@@ -724,10 +726,10 @@
       line-height: 1.85;
       color: #0d1e30;
       margin-bottom: 24px;
-      font-weight: 500;
+      font-weight: 600;
       font-style: italic;
     }
-    .testi-quote::before { content: '"'; font-family: var(--font-serif); font-size: 36px; color: var(--teal); opacity: 0.4; display: block; line-height: 1; margin-bottom: 6px; }
+    .testi-quote::before { content: '"'; font-family: var(--font-serif); font-size: 36px; color: var(--teal); opacity: 0.5; display: block; line-height: 1; margin-bottom: 6px; }
 
     .testi-author {
       display: flex;
@@ -755,8 +757,8 @@
 
     .testi-role {
       font-size: 14px;
-      font-weight: 500;
-      color: #2d4a60;
+      font-weight: 600;
+      color: #2c3e52;
       margin-top: 3px;
     }
 
@@ -771,7 +773,7 @@
     /* ============================================================
        FAQ
     ============================================================ */
-    .faq-section { background: var(--cream); }
+    .faq-section { background: #EEF5F4; border-top: 1px solid rgba(14,122,110,0.10); }
 
     .faq-list {
       max-width: 760px;
@@ -793,8 +795,8 @@
       padding: 22px 24px;
       font-family: var(--font-sans);
       font-size: 17px;
-      font-weight: 600;
-      color: var(--navy);
+      font-weight: 700;
+      color: #071428;
       background: none;
       border: none;
       cursor: pointer;
@@ -817,7 +819,7 @@
     .faq-a {
       padding: 0 24px 20px;
       font-size: 17px;
-      color: var(--muted);
+      color: #0d1e30;
       line-height: 1.75;
     }
 
@@ -848,7 +850,7 @@
     .cta-band h2 {
       font-family: var(--font-serif);
       font-size: clamp(36px, 4vw, 58px);
-      color: var(--white);
+      color: #ffffff !important;
       margin-bottom: 16px;
       letter-spacing: -0.02em;
       line-height: 1.1;
@@ -1066,7 +1068,7 @@
           <span class="proof-label">Experience connected to</span>
           <div class="proof-logos">
             <span class="proof-org">European Commission</span>
-            <span class="proof-org">Spectrum</span>
+            <span class="proof-org">Spectrum think tank</span>
             <span class="proof-org">Thales</span>
           </div>
         </div>
@@ -1134,7 +1136,7 @@
           <div>
             <p class="section-eyebrow">The core offer</p>
             <h2 class="section-title">The 8-week<br>Cohort Program</h2>
-            <p class="section-sub">An 8-week program for professionals who are done running on empty and want weeks that actually hold.</p>
+            <p class="section-sub">An 8-week program for neurodivergent people who are done running on empty and want weeks that actually hold.</p>
 
             <div class="program-features">
               <div class="program-feat">
@@ -1167,7 +1169,7 @@
               </div>
             </div>
 
-            <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
+            <div style="margin-top:36px;margin-bottom:64px;display:flex;gap:14px;flex-wrap:wrap;">
               <a href="/program.html" class="btn btn-primary btn-lg">See the program →</a>
               <a href="/contact.html" class="btn btn-outline btn-lg">Book a call</a>
             </div>
@@ -1195,32 +1197,32 @@
     <!-- ============================================================
          HOW IT WORKS
     ============================================================ -->
-    <section class="section" style="background:#F5F3EE;border-top:1px solid rgba(11,31,58,0.06);border-bottom:1px solid rgba(11,31,58,0.06);">
+    <section class="section" style="background:#F7F5F0;border-top:1px solid rgba(11,31,58,0.08);border-bottom:1px solid rgba(11,31,58,0.08);padding-top:80px;">
       <div class="container">
         <div class="section-head" style="text-align:center;">
-          <p class="section-eyebrow">How it works</p>
-          <h2 class="section-title" style="margin:0 auto;">Four steps. No complexity.</h2>
+          <p class="section-eyebrow" style="color:var(--teal);">How it works</p>
+          <h2 class="section-title" style="margin:0 auto;color:#000000 !important;">Four steps. No complexity.</h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1000px;margin:0 auto;">
-          <div style="background:#fff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 30px rgba(11,31,58,0.06);position:relative;">
-            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">1</div>
-            <h4 style="font-family:var(--font-serif);font-size:20px;color:#0B1F3A;margin-bottom:10px;">Book a call</h4>
-            <p style="font-size:15px;color:#445566;line-height:1.6;">We figure out what's actually going wrong and whether this is a fit.</p>
+          <div style="background:#ffffff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 24px rgba(11,31,58,0.08);position:relative;">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#ffffff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">1</div>
+            <h4 style="font-family:var(--font-serif);font-size:21px;color:#0B1F3A;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Book a call</h4>
+            <p style="font-size:15px;color:#2c3e52;line-height:1.6;font-weight:500;">We figure out what's actually going wrong and whether this is a fit.</p>
           </div>
-          <div style="background:#fff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 30px rgba(11,31,58,0.06);">
-            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">2</div>
-            <h4 style="font-family:var(--font-serif);font-size:20px;color:#0B1F3A;margin-bottom:10px;">Pick a path</h4>
-            <p style="font-size:15px;color:#445566;line-height:1.6;">Cohort or 1:1: we choose what fits your schedule and goals.</p>
+          <div style="background:#ffffff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 24px rgba(11,31,58,0.08);">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#ffffff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">2</div>
+            <h4 style="font-family:var(--font-serif);font-size:21px;color:#0B1F3A;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Pick a path</h4>
+            <p style="font-size:15px;color:#2c3e52;line-height:1.6;font-weight:500;">Cohort or 1:1: we choose what fits your schedule and goals.</p>
           </div>
-          <div style="background:#fff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 30px rgba(11,31,58,0.06);">
-            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">3</div>
-            <h4 style="font-family:var(--font-serif);font-size:20px;color:#0B1F3A;margin-bottom:10px;">Build your OS</h4>
-            <p style="font-size:15px;color:#445566;line-height:1.6;">Energy, focus, emotional tools, execution systems. One week at a time.</p>
+          <div style="background:#ffffff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 24px rgba(11,31,58,0.08);">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#ffffff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">3</div>
+            <h4 style="font-family:var(--font-serif);font-size:21px;color:#0B1F3A;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Build your OS</h4>
+            <p style="font-size:15px;color:#2c3e52;line-height:1.6;font-weight:500;">Energy, focus, emotional tools, execution systems. One week at a time.</p>
           </div>
-          <div style="background:#fff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 30px rgba(11,31,58,0.06);">
-            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">4</div>
-            <h4 style="font-family:var(--font-serif);font-size:20px;color:#0B1F3A;margin-bottom:10px;">Run it</h4>
-            <p style="font-size:15px;color:#445566;line-height:1.6;">Actual weeks, actual constraints, someone in your corner when it gets hard.</p>
+          <div style="background:#ffffff;border:1px solid rgba(11,31,58,0.10);border-radius:20px;padding:32px 24px;text-align:center;box-shadow:0 8px 24px rgba(11,31,58,0.08);">
+            <div style="width:44px;height:44px;border-radius:50%;background:var(--teal);color:#ffffff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">4</div>
+            <h4 style="font-family:var(--font-serif);font-size:21px;color:#0B1F3A;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Run it</h4>
+            <p style="font-size:15px;color:#2c3e52;line-height:1.6;font-weight:500;">Actual weeks, actual constraints, someone in your corner when it gets hard.</p>
           </div>
         </div>
       </div>
@@ -1232,8 +1234,8 @@
     <section class="section pillars-section">
       <div class="container">
         <div class="section-head">
-          <p class="section-eyebrow">The approach</p>
-          <h2 class="section-title">3 pillars. Simple. Practical.<br>Nothing that doesn't move the needle.</h2>
+          <p class="section-eyebrow" style="color:#0B1F3A;">The approach</p>
+          <h2 class="section-title" style="color:#000000;">3 pillars. Simple. Practical.<br>Nothing that doesn't move the needle.</h2>
         </div>
         <div class="pillars-grid">
           <div class="pillar">
@@ -1263,8 +1265,8 @@
     <section class="section testimonials-section">
       <div class="container">
         <div class="section-head">
-          <p class="section-eyebrow">What clients say</p>
-          <h2 class="section-title">Real results.<br>No hype, no magic promises.</h2>
+          <p class="section-eyebrow" style="color:#0B1F3A;">What clients say</p>
+          <h2 class="section-title" style="color:#000000;">Real results.<br>No hype, no magic promises.</h2>
         </div>
         <div class="testi-grid">
           <div class="testi-card">
@@ -1310,8 +1312,8 @@
     <section class="section faq-section">
       <div class="container">
         <div class="section-head" style="text-align:center;">
-          <p class="section-eyebrow">Common questions</p>
-          <h2 class="section-title">Clear answers. No dodging.</h2>
+          <p class="section-eyebrow" style="color:#0B1F3A;">Common questions</p>
+          <h2 class="section-title" style="color:#000000;">Clear answers. No dodging.</h2>
         </div>
         <div class="faq-list" data-accordion>
 
@@ -1425,5 +1427,28 @@
     });
   </script>
 
+
+  <style>
+    /* ── Force contrast override — dernier bloc lu, priorité max ── */
+    .pillars-section .section-title,
+    .testimonials-section .section-title,
+    .faq-section .section-title,
+    h2.section-title {
+      color: #000000 !important;
+    }
+    .pillars-section .section-eyebrow,
+    .testimonials-section .section-eyebrow,
+    .faq-section .section-eyebrow {
+      color: #0B1F3A !important;
+    }
+    /* Fond des sections claires */
+    .pillars-section        { background: #F0EDEA !important; }
+    .testimonials-section   { background: #E8E5E0 !important; }
+    .faq-section            { background: #E4EAE9 !important; }
+    /* Cartes sur fond clair */
+    .pillar { background: #ffffff !important; }
+    .testi-card { background: #ffffff !important; }
+    .faq-item { background: #ffffff !important; }
+  </style>
 </body>
 </html>

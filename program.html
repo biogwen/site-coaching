@@ -4,186 +4,313 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>8-week Cohort Program - Neurodivergent and More</title>
-  <meta name="description" content="The 8-week cohort program for neurodivergent professionals: energy, execution systems, and a structure that holds week after week." />
-
-  <meta property="og:title" content="8-week Cohort Program - Neurodivergent and More" />
-  <meta property="og:description" content="The 8-week cohort program for neurodivergent professionals: energy, execution systems, and a structure that holds week after week." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR_BRAND_DOMAIN.com/program.html" />
-  <meta property="og:image" content="https://YOUR_BRAND_DOMAIN.com/assets/og-image.jpg" />
-
-  <link rel="icon" href="/assets/favicon.ico" />
+  <meta name="description" content="The 8-week cohort program for neurodivergent professionals." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-</head>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy:#0B1F3A;--teal:#0E7A6E;--amber:#DFA200;--bg:#FAFAF8;--white:#FFFFFF;--muted:#4B5F73;--border:rgba(11,31,58,0.10);
+      --serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--sans);background:var(--bg);color:var(--navy);line-height:1.6;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    .container{width:min(1100px,calc(100% - 48px));margin-inline:auto;}
+    .narrow{width:min(760px,calc(100% - 48px));margin-inline:auto;}
 
+    /* NAV */
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;}
+    .brand-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--teal),var(--navy));flex-shrink:0;}
+    .nav-links{display:flex;align-items:center;gap:4px;}
+    .nav-links a{padding:8px 12px;border-radius:10px;font-size:14px;font-weight:500;color:rgba(11,31,58,0.80);transition:background .15s;} .nav-links a.btn-primary{color:#ffffff!important;}
+    .nav-links a:hover{background:rgba(11,31,58,0.06);}
+    .nav-links a[aria-current="page"]{background:rgba(14,122,110,0.10);color:var(--navy);}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;border:1px solid transparent;transition:all .15s;white-space:nowrap;font-family:var(--sans);}
+    .btn-primary{background:var(--teal);color:white;border-color:var(--teal);}
+    .btn-primary:hover{filter:brightness(1.05);}
+    .btn-ghost{background:transparent;color:var(--navy);border-color:var(--border);}
+    .btn-ghost:hover{background:rgba(11,31,58,0.06);}
+    .btn-lg{padding:14px 28px;font-size:16px;border-radius:14px;}
+
+    /* HERO */
+    .hero{background:linear-gradient(160deg,#0B1F3A 0%,#0d2e50 60%,#0B2E3A 100%);padding:100px 0 80px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,122,110,0.22) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:center;position:relative;z-index:1;}
+    .hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+    .hero h1{font-family:var(--serif);font-size:clamp(44px,5vw,70px);color:white;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;}
+    .hero-sub{font-size:18px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:36px;max-width:520px;}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+    .hero-fineprint{margin-top:18px;font-size:13px;color:rgba(255,255,255,.38);}
+    .glance{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:36px 32px;}
+    .glance-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:24px;}
+    .glance-row{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);}
+    .glance-row:last-child{border-bottom:none;}
+    .glance-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);margin-top:8px;flex-shrink:0;}
+    .glance-text{font-size:15px;color:rgba(255,255,255,.86);line-height:1.5;}
+
+    /* FOR WHO */
+    .for-who{padding:96px 0;background:var(--bg);}
+    .for-who-inner{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:28px;overflow:hidden;}
+    .for-who-col{padding:56px 48px;}
+    .for-who-col:first-child{border-right:1px solid var(--border);}
+    .for-who-tag{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;margin-bottom:20px;display:block;}
+    .tag-yes{color:var(--teal);}
+    .tag-no{color:#b03030;}
+    .for-who-col h2{font-family:var(--serif);font-size:30px;color:var(--navy);margin-bottom:28px;line-height:1.2;}
+    .for-who-list{list-style:none;display:grid;gap:16px;}
+    .for-who-list li{display:flex;align-items:flex-start;gap:12px;font-size:16px;line-height:1.55;color:#1a2d42;}
+    .for-who-list li .ar{font-weight:700;flex-shrink:0;margin-top:1px;}
+    .for-who-col:first-child .ar{color:var(--teal);}
+    .for-who-col:last-child .ar{color:rgba(11,31,58,.25);}
+    .for-who-note{margin-top:28px;font-size:13px;color:var(--muted);padding-top:20px;border-top:1px solid var(--border);}
+
+    /* DELIVERABLES */
+    .deliverables{padding:96px 0;background:#F2F0EB;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .section-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
+    .section-title{font-family:var(--serif);font-size:clamp(32px,4vw,50px);color:#000!important;line-height:1.12;letter-spacing:-.02em;margin-bottom:56px;}
+    .deliverable-row{display:grid;grid-template-columns:260px 1fr;border-bottom:1px solid rgba(11,31,58,.10);transition:background .15s;}
+    .deliverable-row:first-child{border-top:1px solid rgba(11,31,58,.10);}
+    .deliverable-row:hover{background:rgba(255,255,255,.55);}
+    .deliverable-label{padding:28px 32px 28px 0;border-right:1px solid rgba(11,31,58,.10);}
+    .deliverable-num{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--teal);margin-bottom:8px;}
+    .deliverable-label h3{font-size:18px;font-weight:700;color:var(--navy);line-height:1.3;}
+    .deliverable-desc{padding:28px 0 28px 40px;font-size:16px;color:#1a2d42;line-height:1.75;display:flex;align-items:center;}
+
+    /* TIMELINE */
+    .roadmap{padding:96px 0;background:var(--bg);}
+    .roadmap-note{font-size:14px;color:var(--muted);margin-top:-40px;margin-bottom:60px;}
+    .timeline{position:relative;padding-left:48px;}
+    .timeline::before{content:'';position:absolute;left:12px;top:10px;width:2px;height:calc(100% - 20px);background:linear-gradient(to bottom,var(--teal) 60%,rgba(14,122,110,.08));}
+    .timeline-item{position:relative;padding:0 0 48px 36px;}
+    .timeline-item:last-child{padding-bottom:0;}
+    .timeline-dot{position:absolute;left:-48px;top:3px;width:26px;height:26px;border-radius:50%;background:var(--white);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--teal);}
+    .timeline-week{font-size:11px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;}
+    .timeline-title{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.3;}
+    .timeline-desc{font-size:15px;color:#2c4060;line-height:1.70;max-width:560px;}
+
+    /* HOW IT WORKS */
+    .how-it-works{padding:96px 0;background:var(--navy);position:relative;overflow:hidden;}
+    .how-it-works::before{content:'';position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(14,122,110,.18) 0%,transparent 65%);}
+    .how-it-works .section-eyebrow{color:var(--amber);}
+    .how-it-works .section-title{color:white!important;margin-bottom:64px;}
+    .steps-flow{display:flex;gap:0;position:relative;z-index:1;}
+    .step-item{flex:1;padding-right:32px;position:relative;}
+    .step-item:not(:last-child)::after{content:'';position:absolute;top:20px;right:8px;width:20px;height:2px;background:rgba(14,122,110,.35);}
+    .step-num{font-family:var(--serif);font-size:40px;color:var(--amber);line-height:1;margin-bottom:8px;opacity:0.85;}
+    .step-title{font-size:17px;font-weight:700;color:white;margin-bottom:10px;line-height:1.3;}
+    .step-desc{font-size:14px;color:rgba(255,255,255,.55);line-height:1.6;}
+
+    /* CTA */
+    .cta-band{padding:100px 0;background:#F2F0EB;border-top:1px solid var(--border);text-align:center;}
+    .cta-band h2{font-family:var(--serif);font-size:clamp(38px,4.5vw,62px);color:var(--navy);line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;margin-top:16px;}
+    .cta-band p{font-size:18px;color:var(--muted);margin-bottom:40px;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+    /* FOOTER */
+    .site-footer{background:var(--navy);color:rgba(255,255,255,.65);padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:48px;}
+    .footer-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:white;margin-bottom:12px;font-size:15px;}
+    .footer-links{display:grid;gap:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,.55);}
+    .footer-links a:hover{color:white;}
+    .footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;}
+
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .glance{display:none;}
+      .for-who-inner{grid-template-columns:1fr;}
+      .for-who-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
+      .deliverable-row{grid-template-columns:1fr;}
+      .deliverable-label{border-right:none;padding:24px 0 0;}
+      .deliverable-desc{padding:8px 0 24px;}
+      .steps-flow{flex-direction:column;gap:32px;}
+      .step-item::after{display:none;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:600px){
+      .hero{padding:72px 0 56px;}
+      .for-who-col{padding:36px 24px;}
+    }
+  </style>
+</head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-    <nav class="nav container" aria-label="Primary">
+  <header class="site-header">
+    <nav class="nav container">
       <a class="brand" href="/index.html">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">Neurodivergent and More</span>
+        <span>Neurodivergent and More</span>
       </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-        <span class="sr-only">Open menu</span>
-        <span class="nav-toggle-bars" aria-hidden="true"></span>
-      </button>
-
-      <div class="nav-menu" id="nav-menu">
+      <div class="nav-links">
         <a aria-current="page" href="/program.html">Cohort</a>
-        <a  href="/about.html">About</a>
-        <a  href="/companies.html">Companies</a>
-        <a  href="/community.html">Community</a>
-        <a  href="/resources.html">Resources</a>
-        <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
+        <a href="/about.html">About</a>
+        <a href="/companies.html">Companies</a>
+        <a href="/community.html">Community</a>
+        <a href="/resources.html">Resources</a>
+        <a class="btn btn-ghost" style="margin-left:8px;" href="/free-course.html">Free course</a>
         <a class="btn btn-primary" href="/contact.html">Book a call</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">The core offer</p>
-        <h1>The 8-week Cohort Program</h1>
-        <p class="lead">
-          Predictable weeks and steady execution — built for neurodivergent professionals with actual schedules.
-        </p>
 
-        <div class="grid-2">
-          <div class="card">
-            <h2>At a glance</h2>
-            <ul class="bullets">
-              <li>Duration - 8 weeks</li>
-              <li>Weekly live session - recordings available</li>
-              <li>1:1 coaching every 2 weeks inside the cohort</li>
-              <li>Exclusive Skool community</li>
-              <li>Templates and lightweight tracking</li>
-            </ul>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="/contact.html">Book a call to join</a>
-              <a class="btn btn-ghost" href="/free-course.html">Get the free email course</a>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <p class="hero-eyebrow">The core offer</p>
+            <h1>8 weeks.<br>One system.<br>Built for<br><em style="font-style:italic;">your</em> brain.</h1>
+            <p class="hero-sub">Calm structure, predictable execution, and work that fits how you're actually wired. Not a generic productivity course. A cohort built for neurodivergent people with real lives.</p>
+            <div class="hero-ctas">
+              <a href="/contact.html" class="btn btn-primary btn-lg">Book a call to join →</a>
+              <a href="/free-course.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,.82);border-color:rgba(255,255,255,.18);">Free email course</a>
             </div>
-            <p class="fineprint">Supportive coaching and skill-building - not medical care.</p>
+            <p class="hero-fineprint">Coaching and skill-building support. Not medical care.</p>
           </div>
-
-          <div class="callout">
-            <h2>Who it is for</h2>
-            <ul class="bullets">
-              <li>ADHD and neurodivergent professionals</li>
-              <li>Employees planning a career transition on their own terms</li>
-              <li>Freelancers who want to deliver reliably without the Sunday panic</li>
-              <li>Executives who need to stay sharp without burning out</li>
-            </ul>
-            <p class="fineprint">No diagnosis required. Fit and willingness matter more than labels.</p>
+          <div class="glance">
+            <p class="glance-label">At a glance</p>
+            <div class="glance-row"><div class="glance-dot"></div><div class="glance-text">8 weeks duration</div></div>
+            <div class="glance-row"><div class="glance-dot"></div><div class="glance-text">Weekly live session — recordings always available</div></div>
+            <div class="glance-row"><div class="glance-dot"></div><div class="glance-text">1:1 coaching every 2 weeks inside the cohort</div></div>
+            <div class="glance-row"><div class="glance-dot"></div><div class="glance-text">Exclusive Skool community access</div></div>
+            <div class="glance-row"><div class="glance-dot"></div><div class="glance-text">Templates and lightweight progress tracking</div></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container narrow">
-        <h2>What you get</h2>
-        <div class="grid-2">
-          <div class="card"><h3>Your Neurodivergent OS</h3><p>A simple system for planning, focusing, recovering, and following through.</p></div>
-          <div class="card"><h3>Energy management plan</h3><p>Rules that reduce crashes, protect your week, and make your pace predictable.</p></div>
-          <div class="card"><h3>Strengths map</h3><p>Your natural advantages, triggers, best conditions, and a work style built around them.</p></div>
-          <div class="card"><h3>Execution tools that stick</h3><p>Minimum timebox, decision hygiene, anti-avoidance, and low-friction routines.</p></div>
-          <div class="card"><h3>Overload tools (non-medical)</h3><p>Tools for when things pile up: conflict prep, decompression, and getting back on track.</p></div>
-          <div class="card"><h3>Support and accountability</h3><p>Community prompts, templates, and 1:1 coaching every two weeks.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt">
-      <div class="container narrow">
-        <h2>How it works</h2>
-        <ol class="steps">
-          <li><strong>Book a call</strong> - we confirm fit and goals</li>
-          <li><strong>Onboarding</strong> - baseline, priorities, simple tracking</li>
-          <li><strong>Weekly rhythm</strong> - one focus, one practice, one real-life application</li>
-          <li><strong>Support</strong> - community + 1:1 every 2 weeks</li>
-          <li><strong>Lock it in</strong> - keep what held, cut what didn't</li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="for-who">
       <div class="container">
-        <div class="section-head">
-          <h2>The 8-week roadmap</h2>
-          <p class="muted">Example structure. We adapt based on your context and constraints.</p>
+        <div class="for-who-inner">
+          <div class="for-who-col">
+            <span class="for-who-tag tag-yes">✓ &nbsp;Who it's for</span>
+            <h2>People who want structure that actually fits.</h2>
+            <ul class="for-who-list">
+              <li><span class="ar">→</span> ADHD and neurodivergent professionals tired of restarting the same broken week</li>
+              <li><span class="ar">→</span> Employees planning a real exit out of the 9-5</li>
+              <li><span class="ar">→</span> Freelancers who want consistent, predictable delivery</li>
+              <li><span class="ar">→</span> Executives under cognitive load who need better stability</li>
+            </ul>
+            <p class="for-who-note">No diagnosis required. Fit and willingness matter more than labels.</p>
+          </div>
+          <div class="for-who-col">
+            <span class="for-who-tag tag-no">× &nbsp;Who it's not for</span>
+            <h2>This isn't for everyone — and that's fine.</h2>
+            <ul class="for-who-list">
+              <li><span class="ar">×</span> If you want quick hacks with zero practice or follow-through</li>
+              <li><span class="ar">×</span> If you need someone to push you with guilt or pressure</li>
+              <li><span class="ar">×</span> If you're in crisis and need clinical support — this is not medical care</li>
+            </ul>
+            <p class="for-who-note">Not sure if it's a fit? Book a call. If it's not right, I'll tell you.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="roadmap">
-          <div class="roadmap-item"><h3>Week 1 - Baseline and clarity</h3><p>Reduce noise, define priorities, create a simple week map.</p></div>
-          <div class="roadmap-item"><h3>Week 2 - Energy management</h3><p>Identify drains, set recovery rules, build a realistic pace.</p></div>
-          <div class="roadmap-item"><h3>Week 3 - Focus systems</h3><p>Minimum timebox, environment design, distraction boundaries.</p></div>
-          <div class="roadmap-item"><h3>Week 4 - Execution without burnout</h3><p>Short planning, small actions, visible progress.</p></div>
-          <div class="roadmap-item"><h3>Week 5 - Emotional skills (non-medical)</h3><p>Tools for overload moments, conflict prep, decompression routines.</p></div>
-          <div class="roadmap-item"><h3>Week 6 - Strength mapping</h3><p>Identify the conditions where you work well. Build around those.</p></div>
-          <div class="roadmap-item"><h3>Week 7 - Reshaping your work</h3><p>Job shaping, freelancer positioning, boundaries, delivery systems.</p></div>
-          <div class="roadmap-item"><h3>Week 8 - Stabilize and scale</h3><p>Consolidate habits, create a realistic 90-day plan, relapse-proof the system.</p></div>
+    <section class="deliverables">
+      <div class="container">
+        <p class="section-eyebrow">What's included</p>
+        <h2 class="section-title">Six things you'll walk out with.</h2>
+        <div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">01</p><h3>Your Neurodivergent OS</h3></div>
+            <div class="deliverable-desc">A simple, personal system for planning, focusing, recovering, and following through — one you can return to even after a bad week.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">02</p><h3>Energy management plan</h3></div>
+            <div class="deliverable-desc">Rules that reduce crashes, protect your week, and make your pace predictable. Built around your patterns, not someone else's morning routine.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">03</p><h3>Strength mapping</h3></div>
+            <div class="deliverable-desc">A clear picture of your strengths, triggers, and best conditions. Then a work style designed around those — not around what works for everyone else.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">04</p><h3>Execution tools that stick</h3></div>
+            <div class="deliverable-desc">Minimum timebox, decision hygiene, anti-avoidance, and low-friction routines. Practical. Tested. Designed to survive messy days.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">05</p><h3>Emotional skills (non-medical)</h3></div>
+            <div class="deliverable-desc">Tools for overload moments, conflict prep, and decompression routines. Not therapy — practical responses to real pressure points.</div>
+          </div>
+          <div class="deliverable-row">
+            <div class="deliverable-label"><p class="deliverable-num">06</p><h3>Support and accountability</h3></div>
+            <div class="deliverable-desc">Community prompts, templates, and 1:1 coaching every two weeks. You don't have to figure this out alone.</div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="cta-row center">
-          <a class="btn btn-primary" href="/contact.html">Book a call</a>
-          <a class="btn btn-ghost" href="/companies.html">Need a company program?</a>
+    <section class="roadmap">
+      <div class="narrow">
+        <p class="section-eyebrow">The 8-week roadmap</p>
+        <h2 class="section-title">What happens, week by week.</h2>
+        <p class="roadmap-note">Example structure. Adapted based on your context and constraints.</p>
+        <div class="timeline">
+          <div class="timeline-item"><div class="timeline-dot">1</div><p class="timeline-week">Week 1</p><h3 class="timeline-title">Baseline and clarity</h3><p class="timeline-desc">Reduce noise, define what actually matters right now, create a simple week map you can follow without willpower.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">2</div><p class="timeline-week">Week 2</p><h3 class="timeline-title">Energy management</h3><p class="timeline-desc">Identify what drains you fastest. Set recovery rules. Build a pace that doesn't require you to burn out to see results.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">3</div><p class="timeline-week">Week 3</p><h3 class="timeline-title">Focus systems</h3><p class="timeline-desc">Minimum timebox, environment design, distraction boundaries. Start easier, finish more often.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">4</div><p class="timeline-week">Week 4</p><h3 class="timeline-title">Execution without burnout</h3><p class="timeline-desc">Short planning cycles, small actions that count, visible progress. The system that keeps running on bad days.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">5</div><p class="timeline-week">Week 5</p><h3 class="timeline-title">Emotional skills (non-medical)</h3><p class="timeline-desc">Tools for overload moments, conflict preparation, and decompression. Practical — not clinical.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">6</div><p class="timeline-week">Week 6</p><h3 class="timeline-title">Strength mapping</h3><p class="timeline-desc">Find your leverage points and the conditions where you consistently do your best work. Then design around those.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">7</div><p class="timeline-week">Week 7</p><h3 class="timeline-title">Work design and strategy</h3><p class="timeline-desc">Job shaping, freelancer positioning, boundaries, delivery systems. Build work that uses your strengths — not just your coping strategies.</p></div>
+          <div class="timeline-item"><div class="timeline-dot">8</div><p class="timeline-week">Week 8</p><h3 class="timeline-title">Stabilize and scale</h3><p class="timeline-desc">Consolidate what worked. Build a realistic 90-day plan. Make the system relapse-proof for when life gets messy again.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <p class="section-eyebrow">How it works</p>
+        <h2 class="section-title">Five steps. No guesswork.</h2>
+        <div class="steps-flow">
+          <div class="step-item"><div class="step-num">01</div><h3 class="step-title">Book a call</h3><p class="step-desc">Confirm fit and goals. If it's not right, I'll say so honestly.</p></div>
+          <div class="step-item"><div class="step-num">02</div><h3 class="step-title">Onboarding</h3><p class="step-desc">Baseline, priorities, and simple tracking set up.</p></div>
+          <div class="step-item"><div class="step-num">03</div><h3 class="step-title">Weekly rhythm</h3><p class="step-desc">One focus, one practice, one real-life application each week.</p></div>
+          <div class="step-item"><div class="step-num">04</div><h3 class="step-title">Live support</h3><p class="step-desc">Community + 1:1 coaching every 2 weeks throughout.</p></div>
+          <div class="step-item"><div class="step-num">05</div><h3 class="step-title">Stabilize</h3><p class="step-desc">Keep what works. Simplify the rest. Build a 90-day plan.</p></div>
         </div>
       </div>
     </section>
 
     <section class="cta-band">
-      <div class="container cta-band-inner">
-        <div>
-          <h2>One call. A clear next move.</h2>
-          <p class="muted">We figure out what's actually going wrong. You leave with a next move.</p>
+      <div class="container">
+        <p class="section-eyebrow">Ready when you are</p>
+        <h2>Start with one<br>conversation.</h2>
+        <p>Book a call, confirm fit, and leave with a clear next step — even if we don't end up working together.</p>
+        <div class="cta-btns">
+          <a href="/contact.html" class="btn btn-primary btn-lg">Book a call →</a>
+          <a href="/free-course.html" class="btn btn-ghost btn-lg">Free email course</a>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Book a call</a>
-          <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
-        </div>
+        <p style="margin-top:20px;font-size:13px;color:var(--muted);">No pressure. If we're not a fit, I'll tell you.</p>
       </div>
     </section>
 
   </main>
 
-<footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand footer-brand">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">Neurodivergent and More</span>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark" aria-hidden="true"></span><span>Neurodivergent and More</span></div>
+          <p style="font-size:14px;line-height:1.6;">Coaching and skill-building for neurodivergent professionals. Not medical care.</p>
         </div>
-        <p class="muted">Coaching and skill-building support for neurodivergent professionals. Not medical care.</p>
+        <div class="footer-links">
+          <a href="/program.html">Cohort</a><a href="/companies.html">Companies</a>
+          <a href="/community.html">Community</a><a href="/resources.html">Resources</a>
+          <a href="/about.html">About</a><a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <a href="/free-course.html">Free email course</a>
+          <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/cookies.html">Cookies</a>
+        </div>
       </div>
-
-      <div class="footer-links">
-        <a href="/program.html">Cohort</a>
-        <a href="/companies.html">Companies</a>
-        <a href="/community.html">Community</a>
-        <a href="/resources.html">Resources</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-
-      <div class="footer-links">
-        <a href="/free-course.html">Free email course</a>
-        <a href="/legal/privacy.html">Privacy</a>
-        <a href="/legal/terms.html">Terms</a>
-        <a href="/legal/cookies.html">Cookies</a>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p class="fineprint">© <span id="year"></span> Neurodivergent and More. All rights reserved.</p>
+      <div class="footer-bottom"><p>© <span id="year"></span> Neurodivergent and More. All rights reserved.</p></div>
     </div>
   </footer>
-
-  <script src="/assets/main.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

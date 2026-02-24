@@ -17,6 +17,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    /* Fix: nav btn-primary text must be white — overrides .nav-menu a color */
+    .nav-menu a.btn-primary { color: #ffffff !important; }
+  </style>
 </head>
 
 <body>
@@ -60,11 +64,13 @@
           </div>
         </div>
 
-        <div class="callout media">
-          <img src="/assets/founder.jpg" alt="Founder photo" loading="lazy" width="800" height="800" />
-          <div>
-            <h3>Founder-led, no scripts</h3>
-            <p class="muted">Direct coaching. Adapted to your schedule, not to a template.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(11,31,58,0.10);box-shadow:0 16px 44px rgba(11,31,58,0.10);">
+            <img src="/assets/founder.png" alt="Founder of Neurodivergent and More" loading="lazy" width="800" height="800" style="width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover;" />
+          </div>
+          <div style="background:rgba(14,122,110,0.08);border:1px solid rgba(14,122,110,0.18);border-radius:14px;padding:18px 20px;">
+            <p style="font-weight:700;color:#0B1F3A;margin-bottom:4px;">Founder-led, no scripts</p>
+            <p style="font-size:14px;color:#4B5F73;margin:0;">Direct coaching. Adapted to your schedule, not to a template.</p>
           </div>
         </div>
       </div>
@@ -155,10 +161,6 @@
           <li><strong>Fit</strong> - cohort, 1:1, or a company program</li>
           <li><strong>Next step</strong> - you leave with a simple action, even if we do not work together</li>
         </ol>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Book a call</a>
-          <a class="btn btn-ghost" href="/program.html">See the cohort</a>
-        </div>
       </div>
     </section>
 
