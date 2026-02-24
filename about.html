@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About - Neurodivergent and More</title>
-  <meta name="description" content="Meet the founder and learn the coaching approach: anti-guru, human-first, and systems that work for neurodivergent brains." />
+  <meta name="description" content="Meet the founder. Direct coaching, no theater, and systems that hold up in actual weeks." />
 
   <meta property="og:title" content="About - Neurodivergent and More" />
-  <meta property="og:description" content="Meet the founder and learn the coaching approach: anti-guru, human-first, and systems that work for neurodivergent brains." />
+  <meta property="og:description" content="Meet the founder. Direct coaching, no theater, and systems that hold up in actual weeks." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://YOUR_BRAND_DOMAIN.com/about.html" />
   <meta property="og:image" content="https://YOUR_BRAND_DOMAIN.com/assets/og-image.jpg" />
@@ -17,252 +17,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/styles.css" />
-
-  <style>
-    /* ── Nav button color fix — prevent nav-menu a from overriding btn colors ── */
-    .nav-menu a.btn-primary {
-      color: #ffffff !important;
-      background: #0F6E66 !important;
-    }
-    .nav-menu a.btn-primary:hover {
-      background: #0d6259 !important;
-      color: #ffffff !important;
-    }
-    .nav-menu a.btn-ghost {
-      color: rgba(11,31,58,0.88) !important;
-      background: transparent !important;
-    }
-
-    /* ── Fineprint global override — readable on all pages ── */
-    .fineprint {
-      font-size: 14px !important;
-      color: #445566 !important;
-      line-height: 1.55;
-      margin-top: 12px;
-    }
-    .site-footer .fineprint {
-      font-size: 13px !important;
-      color: rgba(255,255,255,0.70) !important;
-    }
-
-    /* ── Three Paths Component ── */
-    .three-paths-css {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin: 40px 0 40px;
-      list-style: none;
-      padding: 0;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1.5px solid rgba(11,31,58,0.12);
-      box-shadow: 0 20px 60px rgba(11,31,58,0.10);
-    }
-
-    .tp-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 22px 28px;
-      box-sizing: border-box;
-    }
-
-    .tp-row + .tp-row {
-      border-top: 1px solid rgba(11,31,58,0.08);
-    }
-
-    .tp-faded {
-      background: #f0f0ee;
-    }
-
-    .tp-highlight {
-      background: #0B1F3A;
-      border-top: 1px solid rgba(255,255,255,0.05) !important;
-      padding: 26px 28px;
-    }
-
-    .tp-badge {
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 16px;
-      line-height: 1;
-    }
-
-    .tp-faded .tp-badge {
-      background: rgba(192,57,43,0.12);
-      color: #c0392b;
-    }
-
-    .tp-highlight .tp-badge {
-      background: #0E7A6E;
-      color: white;
-      font-size: 20px;
-      box-shadow: 0 4px 16px rgba(14,122,110,0.50);
-    }
-
-    .tp-text {
-      font-family: "Plus Jakarta Sans", "Inter", sans-serif;
-      line-height: 1.4;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      flex: 1;
-    }
-
-    .tp-faded .tp-text {
-      color: rgba(11,31,58,0.38);
-      font-size: 16px;
-      font-weight: 500;
-      text-decoration: line-through;
-      text-decoration-color: rgba(192,57,43,0.30);
-      text-decoration-thickness: 1.5px;
-    }
-
-    .tp-highlight .tp-text {
-      color: #ffffff;
-      font-size: 19px;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .tp-sep {
-      font-size: 20px;
-      font-weight: 300;
-      opacity: 0.30;
-      text-decoration: none !important;
-      display: inline-block;
-    }
-
-    .tp-highlight .tp-sep {
-      opacity: 0.45;
-    }
-
-    .tp-faded .tp-outcome {
-      color: #c0392b;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .tp-highlight .tp-outcome {
-      color: #6ee7dc;
-    }
-
-    .tp-tag {
-      display: inline-flex;
-      align-items: center;
-      background: #0E7A6E;
-      color: white;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-left: 4px;
-      white-space: nowrap;
-      text-decoration: none;
-    }
-
-    /* ── Approach icons placeholder ── */
-    .visual-placeholder {
-      border: 2px dashed rgba(11,31,58,0.15);
-      border-radius: 16px;
-      min-height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      padding: 24px;
-      margin-bottom: 32px;
-    }
-
-
-    /* ── Approach icons image wrapper — transparent PNG ── */
-    .approach-img-wrap {
-      border-radius: 20px;
-      padding: 8px 32px;
-      margin: 0 auto 48px;
-      max-width: 680px;
-      overflow: hidden;
-    }
-
-    .approach-img-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    /* ── Approach icons CSS component ── */
-    .css-approach-icons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      margin: 0 auto 48px;
-      max-width: 620px;
-      background: #F5F3EE;
-      border: 1px solid rgba(11,31,58,0.09);
-      border-radius: 20px;
-      padding: 36px 24px;
-    }
-
-    .ap-icon-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      flex: 1;
-    }
-
-    .ap-icon-circle {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1.5px solid rgba(14,122,110,0.22);
-      box-shadow: 0 4px 16px rgba(14,122,110,0.10);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .ap-icon-label {
-      font-family: "Plus Jakarta Sans", sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: #0B1F3A;
-      text-align: center;
-      letter-spacing: 0.01em;
-    }
-
-    .ap-icon-divider {
-      width: 1px;
-      height: 48px;
-      background: rgba(11,31,58,0.12);
-      flex-shrink: 0;
-      margin: 0 8px;
-    }
-
-    @media (max-width: 560px) {
-      .css-approach-icons { flex-direction: column; gap: 24px; }
-      .ap-icon-divider { width: 48px; height: 1px; margin: 0; }
-    }
-  </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
+<header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="/index.html">
         <span class="brand-mark" aria-hidden="true"></span>
@@ -275,11 +34,11 @@
       </button>
 
       <div class="nav-menu" id="nav-menu">
-        <a href="/program.html">Cohort</a>
+        <a  href="/program.html">Cohort</a>
         <a aria-current="page" href="/about.html">About</a>
-        <a href="/companies.html">Companies</a>
-        <a href="/community.html">Community</a>
-        <a href="/resources.html">Resources</a>
+        <a  href="/companies.html">Companies</a>
+        <a  href="/community.html">Community</a>
+        <a  href="/resources.html">Resources</a>
         <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
         <a class="btn btn-primary" href="/contact.html">Book a call</a>
       </div>
@@ -287,15 +46,13 @@
   </header>
 
   <main id="main">
-
-    <!-- ══ HERO ══ -->
     <section class="page-hero">
       <div class="container split">
         <div>
           <p class="eyebrow">About</p>
-          <h1>Coaching for neurodivergent people - built with respect, structure, and real constraints.</h1>
+          <h1>Coaching for neurodivergent people. Built for actual brains, actual schedules, actual weeks.</h1>
           <p class="lead">
-            No hype. No shame. Just a practical system that helps you build calmer weeks and work that fits your brain.
+            No motivational speeches. No pressure tactics. A practical system that makes your week predictable.
           </p>
           <div class="cta-row">
             <a class="btn btn-primary" href="/contact.html">Book a call</a>
@@ -304,16 +61,15 @@
         </div>
 
         <div class="callout media">
-          <img src="/assets/founder.png" alt="Founder of Neurodivergent and More" loading="lazy" width="800" height="800" />
+          <img src="/assets/founder.jpg" alt="Founder photo" loading="lazy" width="800" height="800" />
           <div>
-            <h3>Founder-led, human-first</h3>
-            <p class="muted">Practical systems, personalization, and respectful coaching.</p>
+            <h3>Founder-led, no scripts</h3>
+            <p class="muted">Direct coaching. Adapted to your schedule, not to a template.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ WHY THIS EXISTS ══ -->
     <section class="section">
       <div class="container narrow">
         <h2>Why this exists</h2>
@@ -323,138 +79,43 @@
         </p>
         <p>
           I do not buy either. Neurodivergent and More exists to build a third option:
-          calm structure that respects your brain.
+          a structure that holds — built around how your brain actually runs.
         </p>
-
-        <div class="three-paths-css" role="list" aria-label="Three paths comparison">
-          <div class="tp-row tp-faded" role="listitem">
-            <span class="tp-badge" aria-hidden="true">✕</span>
-            <span class="tp-text">
-              Force neurotypical routines
-              <span class="tp-sep" aria-hidden="true">→</span>
-              <span class="tp-outcome">Burnout</span>
-            </span>
-          </div>
-          <div class="tp-row tp-faded" role="listitem">
-            <span class="tp-badge" aria-hidden="true">✕</span>
-            <span class="tp-text">
-              Accept chaos
-              <span class="tp-sep" aria-hidden="true">→</span>
-              <span class="tp-outcome">No progress</span>
-            </span>
-          </div>
-          <div class="tp-row tp-highlight" role="listitem">
-            <span class="tp-badge" aria-hidden="true">✓</span>
-            <span class="tp-text">
-              Calm structure
-              <span class="tp-sep" aria-hidden="true">→</span>
-              <span class="tp-outcome">Work that fits your brain</span>
-              <span class="tp-tag">The third option</span>
-            </span>
-          </div>
-        </div>
-
-        <p style="margin-top: 24px;">
-          We focus on the few changes that create stability: energy management, strengths-based design, and execution systems
-          that survive real life.
+        <p>
+          We focus on the few changes that create stability: energy management, working from your actual strengths, and execution systems that hold up in messy weeks.
         </p>
       </div>
     </section>
 
-    <!-- ══ WHAT MAKES IT DIFFERENT ══ -->
     <section class="section alt">
       <div class="container">
         <div class="section-head">
           <h2>What makes the approach different</h2>
-          <p class="muted">Simple principles that protect you from cringe and chaos.</p>
-        </div>
-
-        <!--
-        ══════════════════════════════════════════════════════════════
-        VISUAL 2 — Approach Icons (Anti-guru / Human-first / Systems)
-        File: /assets/approach-icons.png
-        Page: about.html — "What makes the approach different" section
-
-        PROMPT:
-        "Three minimal monoline icons, same style as the Energy /
-        Strengths / Focus set. Horizontally arranged, transparent background.
-        Icon 1: A shield with a small X — label: Anti-guru
-        Icon 2: A person inside a circle — label: Human-first
-        Icon 3: A simple checkmark grid or bar chart — label: Systems + tracking
-        Teal (#0E7A6E) outlines, navy (#0B1F3A) accent.
-        Same stroke weight and visual style as existing icon set.
-        PNG transparent background. Size: 900x280px."
-        ══════════════════════════════════════════════════════════════
-        -->
-
-        <div class="approach-img-wrap">
-          <img
-            src="/assets/approach-icons.png"
-            alt="Three principles: Anti-guru (shield icon), Human-first (person icon), Systems and tracking (bar chart icon)"
-            loading="lazy"
-            width="1344" height="896"
-          />
-        </div>
-        <div class="css-approach-icons" style="display:none">
-          <div class="ap-icon-item">
-            <div class="ap-icon-circle">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#0E7A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"/>
-                <line x1="11" y1="16" x2="21" y2="16"/>
-              </svg>
-            </div>
-            <div class="ap-icon-label">Anti-guru</div>
-          </div>
-          <div class="ap-icon-divider" aria-hidden="true"></div>
-          <div class="ap-icon-item">
-            <div class="ap-icon-circle">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#0E7A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="16" cy="12" r="5"/>
-                <path d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28"/>
-                <circle cx="16" cy="16" r="14" stroke-opacity="0.25"/>
-              </svg>
-            </div>
-            <div class="ap-icon-label">Human-first</div>
-          </div>
-          <div class="ap-icon-divider" aria-hidden="true"></div>
-          <div class="ap-icon-item">
-            <div class="ap-icon-circle">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#0E7A6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="20" width="6" height="9" rx="1"/>
-                <rect x="13" y="13" width="6" height="16" rx="1"/>
-                <rect x="23" y="6" width="6" height="23" rx="1"/>
-                <polyline points="5,12 12,7 20,10 28,4" stroke="#0B1F3A" stroke-opacity="0.5"/>
-                <circle cx="28" cy="4" r="2" fill="#0E7A6E" stroke="none"/>
-              </svg>
-            </div>
-            <div class="ap-icon-label">Systems + tracking</div>
-          </div>
+          <p class="muted">Three things that separate this from the usual coaching package.</p>
         </div>
 
         <div class="grid-3">
           <div class="card">
-            <h3>Anti-guru</h3>
-            <p>No manipulation, no pressure, no guilt. Just honest feedback and practical tools.</p>
+            <h3>No coaching theater</h3>
+            <p>No manipulation, no pressure tactics, no guilt trips. Honest feedback and tools you can use.</p>
           </div>
           <div class="card">
-            <h3>Human-first</h3>
-            <p>Your context matters. We adapt to your schedule, your energy, and your responsibilities.</p>
+            <h3>Your context first</h3>
+            <p>Your schedule, your constraints, your energy. We work with what you have — not with an ideal version of your week.</p>
           </div>
           <div class="card">
             <h3>Systems + tracking</h3>
-            <p>Lightweight metrics so progress is visible. Keep what works. Drop what does not.</p>
+            <p>Lightweight metrics so you can see what's moving. Keep what works. Drop what doesn't.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ CREDIBILITY ══ -->
     <section class="section">
       <div class="container narrow">
         <h2>Credibility without overclaiming</h2>
         <p>
-          Experience includes collaborations and work connected to organizations such as the European Commission, Spectrum think tank,
-          and Thales. Specific project details can be shared when appropriate and when confidentiality allows.
+          Work connected to organizations including the European Commission, Spectrum think tank, and Thales. Specific project details available when confidentiality allows.
         </p>
         <div class="notice">
           This work is coaching and skill-building support. It is not medical care, diagnosis, or treatment.
@@ -462,32 +123,30 @@
       </div>
     </section>
 
-    <!-- ══ WHO IT IS FOR / NOT FOR ══ -->
     <section class="section alt">
       <div class="container">
         <div class="grid-2">
           <div class="card">
             <h2>Who it is for</h2>
             <ul class="bullets">
-              <li>Neurodivergent professionals who want structure without rigidity</li>
-              <li>Freelancers who want predictable delivery and less last-minute panic</li>
-              <li>Executives who want better emotional stability under pressure</li>
-              <li>People who want a work path that fits their strengths</li>
+              <li>Neurodivergent professionals who want weeks that hold without being rigid</li>
+              <li>Freelancers who want to deliver on time without the Sunday night spiral</li>
+              <li>Executives who need to stay sharp under pressure without burning out</li>
+              <li>People building a work path around how they actually operate</li>
             </ul>
           </div>
           <div class="card">
             <h2>Who it is not for</h2>
             <ul class="bullets">
-              <li>If you want quick hacks with zero practice</li>
-              <li>If you want someone to push you with guilt or pressure</li>
-              <li>If you are in crisis and need clinical support - this is not medical care</li>
+              <li>You want a quick fix that requires zero effort</li>
+              <li>You want someone to push you with guilt or pressure tactics</li>
+              <li>You are in crisis and need clinical support — this is not that</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ WHAT TO EXPECT ══ -->
     <section class="section">
       <div class="container narrow">
         <h2>What to expect on a call</h2>
@@ -503,12 +162,11 @@
       </div>
     </section>
 
-    <!-- ══ CTA BAND ══ -->
     <section class="cta-band">
       <div class="container cta-band-inner">
         <div>
-          <h2>Ready for calmer weeks and better follow-through?</h2>
-          <p class="muted">No pressure. Just a real conversation.</p>
+          <h2>Ready to stop restarting the same broken week?</h2>
+          <p class="muted">If I cannot help, I will tell you.</p>
         </div>
         <div class="cta-row">
           <a class="btn btn-primary" href="/contact.html">Book a call</a>
@@ -516,10 +174,9 @@
         </div>
       </div>
     </section>
-
   </main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand">
@@ -528,6 +185,7 @@
         </div>
         <p class="muted">Coaching and skill-building support for neurodivergent professionals. Not medical care.</p>
       </div>
+
       <div class="footer-links">
         <a href="/program.html">Cohort</a>
         <a href="/companies.html">Companies</a>
@@ -536,6 +194,7 @@
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
       </div>
+
       <div class="footer-links">
         <a href="/free-course.html">Free email course</a>
         <a href="/legal/privacy.html">Privacy</a>
@@ -543,6 +202,7 @@
         <a href="/legal/cookies.html">Cookies</a>
       </div>
     </div>
+
     <div class="container footer-bottom">
       <p class="fineprint">© <span id="year"></span> Neurodivergent and More. All rights reserved.</p>
     </div>

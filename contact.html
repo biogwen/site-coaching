@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - Neurodivergent and More</title>
-  <meta name="description" content="Book a call via Calendly or send a message. Coaching for neurodivergent professionals and company programs." />
+  <meta name="description" content="Book a call or send a message. Direct contact with the founder — no intake forms, no gatekeeping." />
 
   <meta property="og:title" content="Contact - Neurodivergent and More" />
-  <meta property="og:description" content="Book a call via Calendly or send a message. Coaching for neurodivergent professionals and company programs." />
+  <meta property="og:description" content="Book a call or send a message. Direct contact with the founder — no intake forms, no gatekeeping." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://YOUR_BRAND_DOMAIN.com/contact.html" />
   <meta property="og:image" content="https://YOUR_BRAND_DOMAIN.com/assets/og-image.jpg" />
@@ -45,33 +45,62 @@
       color: rgba(255,255,255,0.70) !important;
     }
 
-    /* ── Contact Steps Visual ──
-       Navy wrapper absorbs the black background PNG.
-       Once you have a transparent PNG: remove background + border-radius,
-       keep only the img tag.
-    ── */
-    .contact-steps-wrap {
-      background: #0B1F3A;
-      border-radius: 16px;
-      overflow: hidden;
-      margin: 0 0 8px;
-      padding: 8px 0;
+    /* ── Contact 3-step visual — CSS component ── */
+    .contact-steps {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      margin: 36px 0 12px;
     }
-
-    .contact-steps-wrap img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: 240px;
-      object-fit: contain;
+    .contact-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      gap: 14px;
     }
-
+    .contact-step-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(14,122,110,0.10);
+      border: 2px solid rgba(14,122,110,0.30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+    }
+    .contact-step-title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #0B1F3A;
+    }
+    .contact-step-sub {
+      font-size: 13px;
+      color: #445566;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+    .contact-step-arrow {
+      padding-top: 22px;
+      color: #0E7A6E;
+      font-size: 22px;
+      opacity: 0.45;
+      flex-shrink: 0;
+    }
     .contact-steps-caption {
       text-align: center;
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 8px;
+      font-size: 14px;
+      color: #445566;
+      margin-top: 4px;
       margin-bottom: 40px;
+      font-weight: 500;
+    }
+    @media (max-width: 560px) {
+      .contact-steps { flex-direction: column; align-items: center; gap: 16px; }
+      .contact-step-arrow { padding-top: 0; transform: rotate(90deg); }
     }
 
     .img-todo {
@@ -124,40 +153,35 @@
         <p class="eyebrow">Contact</p>
         <h1>Book a call or send a message.</h1>
         <p class="lead">
-          If you want clarity fast, book a call. If you have a question first, use the form.
+          If you want to move fast, book a call. If you have a question first, use the form.
         </p>
 
-        <!--
-        ══════════════════════════════════════════════════════════════
-        VISUAL — What Happens Next (3-step process)
-        File: /assets/contact-steps.png
-        Page: contact.html — hero, below subtitle
-
-        CURRENT STATUS: Integrated. Navy wrapper absorbs black bg.
-        TO DO: Regenerate with transparent or white background.
-
-        REGENERATION PROMPT:
-        "Same 3-step horizontal flow. Transparent or white background.
-        Three teal (#0E7A6E) circles with white monoline icons inside:
-        Circle 1: calendar icon / Circle 2: speech bubble / Circle 3: checkmark + arrow
-        Labels below each (navy #0B1F3A, bold): Book a call / We talk / Clear next step
-        Sublabels (muted grey, smaller): 15 minutes / Goals + fit / Even if no fit
-        Teal thin arrows between circles. Font: Plus Jakarta Sans.
-        Size: 1200x320px. Transparent PNG — no black or dark background."
-        ══════════════════════════════════════════════════════════════
-        -->
-        <div class="contact-steps-wrap">
-          <img
-            src="/assets/contact-steps.png"
-            alt="What happens next: Book a call (15 minutes), We talk (Goals and fit), Clear next step (even if no fit)"
-            loading="lazy"
-            width="1200"
-            height="480"
-          />
+        <div class="contact-steps">
+          <div class="contact-step">
+            <div class="contact-step-circle">📞</div>
+            <div>
+              <div class="contact-step-title">Book a call</div>
+              <div class="contact-step-sub">15 minutes</div>
+            </div>
+          </div>
+          <div class="contact-step-arrow" aria-hidden="true">→</div>
+          <div class="contact-step">
+            <div class="contact-step-circle">💬</div>
+            <div>
+              <div class="contact-step-title">We talk</div>
+              <div class="contact-step-sub">Goals + fit</div>
+            </div>
+          </div>
+          <div class="contact-step-arrow" aria-hidden="true">→</div>
+          <div class="contact-step">
+            <div class="contact-step-circle">✅</div>
+            <div>
+              <div class="contact-step-title">Clear next step</div>
+              <div class="contact-step-sub">Even if no fit</div>
+            </div>
+          </div>
         </div>
-        <p class="contact-steps-caption">
-          No surprises. No pressure. You leave with a clear next step regardless.
-        </p>
+        <p class="contact-steps-caption">No surprises. Direct. You leave with a clear next step regardless.</p>
       </div>
     </section>
 
@@ -167,12 +191,13 @@
         <div class="grid-2">
           <div class="card">
             <h2>Book a call</h2>
-            <p class="muted">Pick a time that works. 15 minutes is enough to get clarity.</p>
-            <div class="embed-box" aria-label="Calendly embed placeholder">
-              [CALENDLY_EMBED_CODE_HERE]
-            </div>
+            <p class="muted">Pick a time that works. 15 minutes is enough to know if this makes sense.</p>
+<!-- Début de widget en ligne Calendly -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/g-mouthuy/first-contact?background_color=ffffff&text_color=0b1f3a&primary_color=0f6e66&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Fin de widget en ligne Calendly -->
             <p class="fineprint">
-              No pressure. If we are not a fit, I will tell you.
+              If I cannot help, I will tell you.
             </p>
           </div>
 

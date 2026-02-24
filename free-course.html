@@ -4,10 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Free Email Course - Neurodivergent and More</title>
-  <meta name="description" content="Free email course: self-acceptance for neurodivergent brains, plus practical steps for calmer structure and better follow-through." />
+  <meta name="description" content="Free email course: stop fighting how your brain works and start building around it." />
 
   <meta property="og:title" content="Free Email Course - Neurodivergent and More" />
-  <meta property="og:description" content="Free email course: self-acceptance for neurodivergent brains, plus practical steps for calmer structure and better follow-through." />
+  <meta property="og:description" content="Free email course: stop fighting how your brain works and start building around it." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://YOUR_BRAND_DOMAIN.com/free-course.html" />
   <meta property="og:image" content="https://YOUR_BRAND_DOMAIN.com/assets/og-image.jpg" />
@@ -19,6 +19,114 @@
   <link rel="stylesheet" href="/assets/styles.css" />
 
   <style>
+
+  
+    /* ── Mailchimp form — site-styled ── */
+    .mc-form {
+      display: grid;
+      gap: 0;
+      margin-top: 20px;
+    }
+
+    .mc-form-fields {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .mc-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0B1F3A;
+      margin-bottom: 6px;
+    }
+
+    .mc-required {
+      color: #0E7A6E;
+      margin-left: 2px;
+    }
+
+    .mc-input {
+      display: block;
+      width: 100%;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 15px;
+      color: #0B1F3A;
+      background: #ffffff;
+      border: 1.5px solid rgba(11,31,58,0.18);
+      border-radius: 12px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.15s;
+      box-sizing: border-box;
+    }
+
+    .mc-input:focus {
+      border-color: #0E7A6E;
+      box-shadow: 0 0 0 3px rgba(14,122,110,0.15);
+    }
+
+    .mc-input::placeholder {
+      color: rgba(11,31,58,0.38);
+    }
+
+    /* GDPR checkbox */
+    .mc-gdpr {
+      margin-bottom: 20px;
+    }
+
+    .mc-checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: #2d4a60;
+      line-height: 1.5;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .mc-checkbox {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      margin-top: 2px;
+      accent-color: #0E7A6E;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .mc-submit {
+      font-size: 16px;
+      font-weight: 700;
+      padding: 14px 20px;
+      margin-top: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Response messages */
+    .mc-response {
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .mc-response--error {
+      background: rgba(220,50,50,0.08);
+      border: 1px solid rgba(220,50,50,0.25);
+      color: #8b1a1a;
+    }
+
+    .mc-response--success {
+      background: rgba(14,122,110,0.08);
+      border: 1px solid rgba(14,122,110,0.25);
+      color: #0b5e58;
+    }
+
     /* ── Nav button color fix — prevent nav-menu a from overriding btn colors ── */
     .nav-menu a.btn-primary {
       color: #ffffff !important;
@@ -51,7 +159,7 @@
       align-items: center;
       gap: 0;
       margin: 32px 0 8px;
-      padding: 0;
+      padding: 14px 0 0;
       list-style: none;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -145,7 +253,7 @@
       margin-top: 8px;
       margin-bottom: 24px;
     }
-  </style>
+    </style>
 </head>
 
 <body>
@@ -180,16 +288,16 @@
       <div class="container split">
         <div>
           <p class="eyebrow">Free email course</p>
-          <h1>Self-acceptance for neurodivergent brains (without the cringe)</h1>
+          <h1>Stop fighting your brain. Start using it.</h1>
           <p class="lead">
-            A short, practical series to help you stop fighting your brain and start building around it.
+            A short email series. Practical, direct, no motivational fluff.
           </p>
 
           <ul class="checklist">
-            <li>Why forcing neurotypical routines backfires</li>
-            <li>How to reduce daily shame and decision overload</li>
-            <li>A simple method to design your week around energy</li>
-            <li>The first steps of a system you can actually follow</li>
+            <li>Why neurotypical routines keep failing you</li>
+            <li>How to cut decision overload before it drains you</li>
+            <li>A simple method to plan your week around energy — not willpower</li>
+            <li>The first moves of a system that holds up in actual weeks</li>
           </ul>
 
           <ol class="email-seq" aria-label="5-email course sequence">
@@ -236,19 +344,50 @@
           <p class="email-seq-caption">5 emails. One idea each. No overwhelm.</p>
 
           <div class="notice">
-            No spam. Unsubscribe anytime. Your data stays yours.
+            No spam. No upsells buried in the sequence. Unsubscribe anytime.
           </div>
         </div>
 
         <div class="callout">
           <h2>Get the course</h2>
           <p class="muted">Enter your email to get started.</p>
-          <div class="embed-box" aria-label="Email form embed placeholder">
-            [EMAIL_FORM_EMBED_HERE]
-          </div>
-          <p class="fineprint">
-            By subscribing, you agree to the Privacy Policy.
-          </p>
+
+          <form action="https://neurodivergentandmore.us13.list-manage.com/subscribe/post?u=3f0262289a15826a278a32e04&amp;id=bc5e049a41&amp;v_id=7&amp;f_id=00aae6e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="mc-form validate" target="_blank" novalidate>
+
+            <div class="mc-form-fields">
+              <label class="mc-label" for="mce-EMAIL">Email address <span class="mc-required" aria-label="required">*</span></label>
+              <input class="mc-input" type="email" name="EMAIL" id="mce-EMAIL" placeholder="you@example.com" autocomplete="email" required />
+
+              <label class="mc-label" for="mce-FNAME">First name</label>
+              <input class="mc-input" type="text" name="FNAME" id="mce-FNAME" placeholder="Your first name" autocomplete="given-name" />
+            </div>
+
+            <div class="mc-gdpr">
+              <label class="mc-checkbox-label">
+                <input type="checkbox" id="gdpr_134" name="gdpr[134]" class="mc-checkbox" value="Y" required />
+                <span>I agree to receive emails from Neurodivergent and More. No spam — unsubscribe anytime.</span>
+              </label>
+            </div>
+
+            <!-- Tag hidden — do not remove -->
+            <div hidden><input type="hidden" name="tags" value="1521067" /></div>
+
+            <!-- Honeypot — do not remove -->
+            <div aria-hidden="true" style="position:absolute;left:-5000px">
+              <input type="text" name="b_3f0262289a15826a278a32e04_bc5e049a41" tabindex="-1" value="" />
+            </div>
+
+            <div id="mce-responses">
+              <div id="mce-error-response" class="mc-response mc-response--error" style="display:none"></div>
+              <div id="mce-success-response" class="mc-response mc-response--success" style="display:none"></div>
+            </div>
+
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-full mc-submit">
+              Get the free course →
+            </button>
+
+            <p class="fineprint">By subscribing you agree to our <a href="/privacy.html" style="color:#0E7A6E;text-decoration:underline">Privacy Policy</a>. Powered by Mailchimp.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -265,12 +404,12 @@
 
           <button class="faq-q" aria-expanded="false">Will you try to sell me aggressively?</button>
           <div class="faq-a" hidden>
-            <p>No. You may receive an invitation to book a call, but the tone stays respectful and direct.</p>
+            <p>No. There's one invitation to book a call. No pressure loop, no fake urgency.</p>
           </div>
 
           <button class="faq-q" aria-expanded="false">Can I join without a diagnosis?</button>
           <div class="faq-a" hidden>
-            <p>Yes. This is about patterns and support, not labels.</p>
+            <p>Yes. This is about patterns and what to do about them, not about labels.</p>
           </div>
         </div>
 
@@ -313,5 +452,7 @@
   </footer>
 
   <script src="/assets/main.js"></script>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 </body>
 </html>
