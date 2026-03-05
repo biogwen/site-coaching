@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>1:1 Coaching - Neurodivergent and More</title>
+  <meta name="description" content="Private 1:1 coaching for neurodivergent professionals. Flexible, ongoing, built around your context. No cookie-cutter frameworks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0B1F3A;--teal:#0E7A6E;--amber:#DFA200;--bg:#FAFAF8;--muted:#4B5F73;--border:rgba(11,31,58,0.10);--serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--sans);background:var(--bg);color:var(--navy);font-size:19px;line-height:1.80;overflow-x:hidden;}
+    a{text-decoration:none;color:inherit;}
+    .container{width:min(1100px,calc(100% - 48px));margin-inline:auto;}
+
+    /* NAV */
+    .site-header{position:sticky;top:0;z-index:100;background:rgba(250,250,248,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;}
+    .brand-mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--teal),var(--navy));flex-shrink:0;}
+    .nav-links{display:flex;align-items:center;gap:4px;}
+    .nav-links a{padding:8px 12px;border-radius:10px;font-size:14px;font-weight:500;color:rgba(11,31,58,0.80);transition:background .15s;}
+    .nav-links a:hover{background:rgba(11,31,58,0.06);}
+    .nav-links a[aria-current="page"]{background:rgba(14,122,110,0.10);color:var(--navy);}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;border:1px solid transparent;transition:all .15s;white-space:nowrap;font-family:var(--sans);}
+    .btn-primary{background:var(--teal);color:white!important;border-color:var(--teal);}
+    .btn-primary:hover{filter:brightness(1.05);}
+    .btn-ghost{background:transparent;color:var(--navy);border-color:var(--border);}
+    .btn-ghost:hover{background:rgba(11,31,58,0.06);}
+    .btn-lg{padding:14px 28px;font-size:16px;border-radius:14px;}
+    .btn-full{width:100%;justify-content:center;}
+
+    /* HERO */
+    .hero{background:linear-gradient(160deg,#0B1F3A 0%,#0d2e50 60%,#0B2E3A 100%);padding:100px 0 80px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,122,110,0.22) 0%,transparent 65%);pointer-events:none;}
+    .hero-inner{display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:center;position:relative;z-index:1;}
+    .hero-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+    .hero h1{font-family:var(--serif);font-size:clamp(44px,5vw,68px);color:white;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;}
+    .hero-sub{font-size:20px;color:rgba(255,255,255,.78);line-height:1.75;margin-bottom:36px;max-width:520px;}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+    .hero-fineprint{margin-top:18px;font-size:13px;color:rgba(255,255,255,.38);}
+    .price-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:36px 32px;}
+    .price-tag{font-size:13px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;}
+    .price-amount{font-family:var(--serif);font-size:52px;color:white;line-height:1;margin-bottom:4px;}
+    .price-period{font-size:16px;color:rgba(255,255,255,.55);margin-bottom:24px;}
+    .price-divider{border:none;border-top:1px solid rgba(255,255,255,.10);margin-bottom:20px;}
+    .price-list{list-style:none;display:grid;gap:12px;margin-bottom:28px;}
+    .price-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px;color:rgba(255,255,255,.80);line-height:1.55;}
+    .price-check{color:var(--teal);font-weight:700;flex-shrink:0;}
+    .price-note{font-size:13px;color:rgba(255,255,255,.40);text-align:center;margin-top:12px;}
+
+    /* FOR WHO */
+    .section-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
+    .section-title{font-family:var(--serif);font-size:clamp(34px,4vw,52px);color:#000;line-height:1.12;letter-spacing:-.02em;margin-bottom:16px;}
+    .section-sub{font-size:19px;color:var(--muted);margin-bottom:56px;max-width:560px;}
+    .for-who{padding:96px 0;background:var(--bg);}
+    .for-who-inner{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:28px;overflow:hidden;background:white;}
+    .for-who-col{padding:56px 48px;}
+    .for-who-col:first-child{border-right:1px solid var(--border);}
+    .for-who-tag{font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;margin-bottom:20px;display:block;}
+    .tag-yes{color:var(--teal);}
+    .tag-no{color:#b03030;}
+    .for-who-col h2{font-family:var(--serif);font-size:clamp(26px,3vw,34px);color:var(--navy);margin-bottom:28px;line-height:1.2;}
+    .for-who-list{list-style:none;display:grid;gap:16px;}
+    .for-who-list li{display:flex;align-items:flex-start;gap:12px;font-size:19px;line-height:1.70;color:#1a2d42;}
+    .for-who-list li .ar{font-weight:700;flex-shrink:0;margin-top:2px;}
+    .for-who-col:first-child .ar{color:var(--teal);}
+    .for-who-col:last-child .ar{color:rgba(11,31,58,.22);}
+    .for-who-note{margin-top:28px;font-size:13px;color:var(--muted);padding-top:20px;border-top:1px solid var(--border);}
+
+    /* WHAT WE WORK ON */
+    .work-on{padding:96px 0;background:#F2F0EB;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);}
+    .work-item{background:white;padding:36px 32px;}
+    .work-num{font-family:var(--serif);font-size:32px;color:var(--teal);opacity:.5;line-height:1;margin-bottom:16px;}
+    .work-title{font-size:20px;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.3;}
+    .work-desc{font-size:17px;color:#2c4060;line-height:1.75;}
+
+    /* HOW IT WORKS */
+    .how-it-works{padding:96px 0;background:var(--navy);position:relative;overflow:hidden;}
+    .how-it-works::before{content:'';position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(14,122,110,.18) 0%,transparent 65%);}
+    .how-eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:16px;}
+    .how-title{font-family:var(--serif);font-size:clamp(34px,4vw,52px);color:white;line-height:1.12;letter-spacing:-.02em;margin-bottom:64px;}
+    .steps-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative;z-index:1;}
+    .step-num{font-family:var(--serif);font-size:40px;color:var(--amber);line-height:1;margin-bottom:8px;opacity:.85;}
+    .step-title{font-size:17px;font-weight:700;color:white;margin-bottom:10px;line-height:1.3;}
+    .step-desc{font-size:17px;color:rgba(255,255,255,.65);line-height:1.70;}
+
+    /* VS TABLE */
+    .vs-section{padding:96px 0;background:var(--bg);}
+    .vs-table{border:1px solid var(--border);border-radius:20px;overflow:hidden;background:white;}
+    .vs-header{display:grid;grid-template-columns:1fr 1fr 1fr;background:#F2F0EB;border-bottom:1px solid var(--border);}
+    .vs-col-head{padding:20px 28px;font-size:14px;font-weight:700;color:var(--muted);}
+    .vs-col-head.hl{background:rgba(14,122,110,.08);color:var(--teal);}
+    .vs-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border);}
+    .vs-row:last-child{border-bottom:none;}
+    .vs-cell{padding:20px 28px;font-size:17px;color:#1a2d42;line-height:1.55;}
+    .vs-cell.hl{background:rgba(14,122,110,.04);}
+    .vs-cell.label{font-weight:600;color:var(--navy);}
+    .check{color:var(--teal);font-weight:700;}
+    .dash{color:rgba(11,31,58,.25);}
+
+    /* TESTIMONIALS */
+    .testimonials{padding:96px 0;background:#F2F0EB;border-top:1px solid var(--border);}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .testi-card{background:white;border:1px solid var(--border);border-radius:20px;padding:32px;box-shadow:0 8px 32px rgba(11,31,58,.06);}
+    .testi-stars{color:var(--amber);font-size:16px;margin-bottom:16px;letter-spacing:2px;}
+    .testi-quote{font-size:18px;color:#1a2d42;line-height:1.75;font-style:italic;margin-bottom:24px;}
+    .testi-author{display:flex;align-items:center;gap:12px;}
+    .testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:15px;flex-shrink:0;}
+    .testi-name{font-weight:700;font-size:15px;color:var(--navy);}
+    .testi-role{font-size:13px;color:var(--muted);}
+
+    /* FAQ */
+    .faq-section{padding:96px 0;}
+    .faq-list{display:grid;gap:4px;max-width:760px;}
+    .faq-item{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;}
+    .faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 24px;font-size:18px;font-weight:600;color:var(--navy);cursor:pointer;font-family:var(--sans);display:flex;justify-content:space-between;align-items:center;gap:12px;}
+    .faq-q::after{content:'+';font-size:22px;font-weight:400;color:var(--teal);flex-shrink:0;transition:transform .2s;}
+    .faq-q[aria-expanded="true"]::after{transform:rotate(45deg);}
+    .faq-a{padding:0 24px;}
+    .faq-a p{padding-bottom:22px;font-size:18px;color:#2c4060;line-height:1.80;}
+
+    /* CTA */
+    .cta-band{padding:100px 0;background:var(--navy);text-align:center;position:relative;overflow:hidden;}
+    .cta-band::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(14,122,110,.20) 0%,transparent 65%);pointer-events:none;}
+    .cta-band h2{font-family:var(--serif);font-size:clamp(38px,4.5vw,62px);color:white;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px;position:relative;z-index:1;}
+    .cta-band p{font-size:18px;color:rgba(255,255,255,.65);margin-bottom:40px;position:relative;z-index:1;}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+
+    /* FOOTER */
+    .site-footer{background:var(--navy);color:rgba(255,255,255,.65);padding:64px 0 32px;}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:48px;}
+    .footer-brand{display:flex;align-items:center;gap:10px;font-weight:700;color:white;margin-bottom:12px;font-size:15px;}
+    .footer-links{display:grid;gap:10px;}
+    .footer-links a{font-size:14px;color:rgba(255,255,255,.55);}
+    .footer-links a:hover{color:white;}
+    .footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:13px;}
+
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .price-card{display:none;}
+      .for-who-inner{grid-template-columns:1fr;}
+      .for-who-col:first-child{border-right:none;border-bottom:1px solid var(--border);}
+      .work-grid{grid-template-columns:1fr;}
+      .steps-flow{grid-template-columns:1fr 1fr;gap:32px;}
+      .vs-header,.vs-row{grid-template-columns:1fr 1fr;}
+      .vs-col-head:first-child,.vs-cell.label{display:none;}
+      .testi-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:600px){
+      .hero{padding:72px 0 56px;}
+      .for-who-col{padding:36px 24px;}
+      .steps-flow{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="/index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Neurodivergent and More</span>
+      </a>
+      <div class="nav-links">
+        <a href="/program.html">Cohort</a>
+        <a aria-current="page" href="/coaching.html" style="white-space:nowrap;">1:1 Coaching</a>
+        <a href="/community.html">Community</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/about.html">About</a>
+        <a class="btn btn-ghost" style="margin-left:8px;" href="/free-course.html">Free course</a>
+        <a class="btn btn-primary" href="/contact.html">Book a call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div>
+            <div class="hero-eyebrow">Private 1:1 coaching</div>
+            <h1>Built entirely<br>around you.</h1>
+            <p class="hero-sub">No cohort schedule to follow. No group pace to match. Just focused, private work on the systems, patterns, and habits that matter most for your specific brain and life.</p>
+            <div class="hero-ctas">
+              <a href="/contact.html" class="btn btn-primary btn-lg">Book a free call →</a>
+              <a href="/program.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,.80);border-color:rgba(255,255,255,.20);">See the cohort instead</a>
+            </div>
+            <p class="hero-fineprint">If I cannot help, I will tell you. No pressure.</p>
+          </div>
+          <div class="price-card">
+            <div class="price-tag">Investment</div>
+            <div class="price-amount">$600<span style="font-size:28px;opacity:.6;">–800</span></div>
+            <div class="price-period">per month · ongoing · flexible</div>
+            <hr class="price-divider" />
+            <ul class="price-list">
+              <li><span class="price-check">✓</span> 2–4 sessions/month (50 min each)</li>
+              <li><span class="price-check">✓</span> Async support between sessions</li>
+              <li><span class="price-check">✓</span> Skool community access</li>
+              <li><span class="price-check">✓</span> Templates, trackers &amp; tools</li>
+              <li><span class="price-check">✓</span> Custom Neurodivergent OS</li>
+              <li><span class="price-check">✓</span> Flexible scheduling — any timezone</li>
+            </ul>
+            <a href="/contact.html" class="btn btn-primary btn-full">Book a free call →</a>
+            <p class="price-note">No diagnosis required · Cancel anytime</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="for-who">
+      <div class="container">
+        <div class="for-who-inner">
+          <div class="for-who-col">
+            <span class="for-who-tag tag-yes">→ This is for you if</span>
+            <h2>You need depth,<br>not a schedule.</h2>
+            <ul class="for-who-list">
+              <li><span class="ar">✓</span> You want a truly personalized approach — not a program adapted for a group</li>
+              <li><span class="ar">✓</span> Your context changes frequently (nomad, freelancer, shifting responsibilities)</li>
+              <li><span class="ar">✓</span> You've done programs before and need to go deeper on specific patterns</li>
+              <li><span class="ar">✓</span> You're an executive or founder with a complex, high-pressure context</li>
+              <li><span class="ar">✓</span> You need maximum flexibility — no fixed cohort dates, async-friendly</li>
+            </ul>
+            <p class="for-who-note">No diagnosis required. Fit and willingness matter more than labels.</p>
+          </div>
+          <div class="for-who-col">
+            <span class="for-who-tag tag-no">✕ Not the right fit if</span>
+            <h2>Some people do better<br>in the cohort.</h2>
+            <ul class="for-who-list">
+              <li><span class="ar">–</span> You thrive with group energy and peer accountability</li>
+              <li><span class="ar">–</span> You want a structured week-by-week curriculum</li>
+              <li><span class="ar">–</span> Budget is a priority — the cohort is more cost-effective</li>
+              <li><span class="ar">–</span> You're new to this work and want a guided starting point</li>
+            </ul>
+            <p class="for-who-note">Not sure? Book a free call — we'll figure it out together. No pressure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-on">
+      <div class="container">
+        <p class="section-eyebrow">What we cover</p>
+        <h2 class="section-title">Everything your brain<br>needs to stop crashing.</h2>
+        <p class="section-sub">We build your full Neurodivergent OS together — in the order that matters most for you.</p>
+        <div class="work-grid">
+          <div class="work-item">
+            <div class="work-num">01</div>
+            <h3 class="work-title">Energy management</h3>
+            <p class="work-desc">Identify your real drain patterns, build recovery rules, and protect your week before it collapses. Work with your capacity, not against it.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-num">02</div>
+            <h3 class="work-title">Strength mapping</h3>
+            <p class="work-desc">Find the conditions where you thrive. Build your work around your actual superpowers instead of brute-forcing tasks your brain resists.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-num">03</div>
+            <h3 class="work-title">Focus &amp; execution</h3>
+            <p class="work-desc">Minimum timebox. Decision hygiene. Anti-avoidance. The practical tools that make starting less painful and finishing more predictable.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-num">04</div>
+            <h3 class="work-title">Emotional skills (non-medical)</h3>
+            <p class="work-desc">Tools for overload moments, conflict prep, and decompression routines. Practical skills for high-stakes situations — not therapy.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-num">05</div>
+            <h3 class="work-title">Work design &amp; strategy</h3>
+            <p class="work-desc">Job shaping, freelancer positioning, boundaries, delivery systems. Build a work life that doesn't require you to mask to survive it.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-num">06</div>
+            <h3 class="work-title">System stabilization</h3>
+            <p class="work-desc">Keep what works. Drop what doesn't. Build a fast-reset protocol for when life disrupts everything — because it will.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container" style="position:relative;z-index:1;">
+        <p class="how-eyebrow">The process</p>
+        <h2 class="how-title">How it works</h2>
+        <div class="steps-flow">
+          <div>
+            <div class="step-num">1</div>
+            <div class="step-title">Free discovery call</div>
+            <p class="step-desc">30 minutes. We clarify your goals, your context, and whether this is the right fit. No sales pressure.</p>
+          </div>
+          <div>
+            <div class="step-num">2</div>
+            <div class="step-title">Baseline &amp; priorities</div>
+            <p class="step-desc">First session: map your energy patterns and biggest friction points. Build a simple starting plan together.</p>
+          </div>
+          <div>
+            <div class="step-num">3</div>
+            <div class="step-title">Monthly rhythm</div>
+            <p class="step-desc">2–4 sessions per month, scheduled around your timezone. Real work, real context, real adjustments.</p>
+          </div>
+          <div>
+            <div class="step-num">4</div>
+            <div class="step-title">Build &amp; stabilize</div>
+            <p class="step-desc">Keep what works. Test what doesn't. Build a system resilient enough to survive a bad week — or a new city.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vs-section">
+      <div class="container">
+        <p class="section-eyebrow" style="text-align:center;">Compare</p>
+        <h2 class="section-title" style="text-align:center;margin-bottom:48px;">1:1 coaching vs the cohort</h2>
+        <div class="vs-table">
+          <div class="vs-header">
+            <div class="vs-col-head"></div>
+            <div class="vs-col-head hl">1:1 Coaching</div>
+            <div class="vs-col-head">8-Week Cohort</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Format</div>
+            <div class="vs-cell hl">Private, fully personalized</div>
+            <div class="vs-cell">Group program, structured curriculum</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Schedule</div>
+            <div class="vs-cell hl">Flexible — your timezone, your pace</div>
+            <div class="vs-cell">Weekly live sessions (recordings available)</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Duration</div>
+            <div class="vs-cell hl">Ongoing — cancel anytime</div>
+            <div class="vs-cell">8 weeks, defined start &amp; end</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Investment</div>
+            <div class="vs-cell hl">$600–800/month</div>
+            <div class="vs-cell">$1,600 total (or $400/month × 4)</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Community access</div>
+            <div class="vs-cell hl"><span class="check">✓</span> Included</div>
+            <div class="vs-cell"><span class="check">✓</span> Included</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Peer accountability</div>
+            <div class="vs-cell hl"><span class="dash">–</span> Not included</div>
+            <div class="vs-cell"><span class="check">✓</span> Included</div>
+          </div>
+          <div class="vs-row">
+            <div class="vs-cell label">Depth of personalization</div>
+            <div class="vs-cell hl"><span class="check">✓✓</span> Maximum</div>
+            <div class="vs-cell"><span class="check">✓</span> Strong</div>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:15px;color:var(--muted);margin-top:20px;">Not sure which fits? Book a free call — we'll figure it out together.</p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <p class="section-eyebrow">What clients say</p>
+        <h2 class="section-title" style="margin-bottom:48px;">Real results.<br>No hype, no magic promises.</h2>
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Even if I followed multiple trainings about ADHD, always the same things that didn't work... And Gwen arrived and changed my life."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">R</div>
+              <div>
+                <div class="testi-name">Ross</div>
+                <div class="testi-role">Former NASA engineer &amp; hightech product designer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"I was able to understand my neurodivergent customers and employees, so I changed my approach to my way of communicating."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">S</div>
+              <div>
+                <div class="testi-name">Stacey</div>
+                <div class="testi-role">Coach &amp; former VP, Fortune 500</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"I got back a working life and the right person to help me."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">J</div>
+              <div>
+                <div class="testi-name">Jaeger</div>
+                <div class="testi-role">Musician &amp; poet</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <p class="section-eyebrow">Common questions</p>
+        <h2 class="section-title" style="margin-bottom:48px;">Clear answers.<br>No dodging.</h2>
+        <div class="faq-list" data-accordion>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">How many sessions per month?</button>
+            <div class="faq-a" hidden><p>Typically 2–4 sessions of 50 minutes each, depending on your needs and pace. We figure out the right rhythm in the first session.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Can I cancel anytime?</button>
+            <div class="faq-a" hidden><p>Yes. There's no long-term contract. You can pause or stop with one month's notice. The goal is that you stay because it's working — not because you're locked in.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">I'm in a different timezone. Can we still work together?</button>
+            <div class="faq-a" hidden><p>Yes. Sessions are scheduled flexibly around your timezone. If you're a nomad and your timezone changes regularly, we adapt. Notes and summaries after each session keep you covered async too.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">What happens between sessions?</button>
+            <div class="faq-a" hidden><p>You get async support via Skool, plus direct access between sessions if something urgent comes up. You're not on your own between calls.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Do I need a diagnosis?</button>
+            <div class="faq-a" hidden><p>No. If the patterns and challenges resonate, we can work with that. We focus on systems, support, and skills — not labels.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">Is this therapy?</button>
+            <div class="faq-a" hidden><p>No. This is coaching and skill-building support. We focus on practical systems, habits, and tools. If you need clinical care, I'll tell you honestly and help you find the right resource.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to build something<br>that actually fits?</h2>
+        <p>Book a free 30-minute call. We clarify your goals, confirm fit, and you leave with a next step — even if we don't work together.</p>
+        <div class="cta-btns">
+          <a href="/contact.html" class="btn btn-primary btn-lg">Book a free call →</a>
+          <a href="/program.html" class="btn btn-ghost btn-lg" style="color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.20);">See the cohort instead</a>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,.30);margin-top:20px;">No pressure. If I cannot help, I will tell you.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><span class="brand-mark" aria-hidden="true"></span><span>Neurodivergent and More</span></div>
+          <p style="font-size:14px;line-height:1.6;">Coaching and skill-building for neurodivergent professionals. Not medical care.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/program.html">Cohort</a>
+          <a href="/coaching.html" style="white-space:nowrap;">1:1 Coaching</a>
+          <a href="/community.html">Community</a>
+          <a href="/resources.html">Resources</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <a href="/free-course.html">Free email course</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/cookies.html">Cookies</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© <span id="year"></span> Neurodivergent and More. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('[data-accordion] .faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('[data-accordion] .faq-q').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.hidden = true;
+        });
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.hidden = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -22,6 +22,21 @@
     .nav-menu a.btn-primary, .nav-menu .btn-primary, .site-header .btn-primary { color: #ffffff !important; }
   </style>
   <style>
+    /* ── Credentials grid responsive ── */
+    @media (max-width: 700px) {
+      .cert-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      .cert-grid { grid-template-columns: 1fr !important; }
+    }
+    /* ── Your Story section responsive ── */
+    @media (max-width: 860px) {
+      .story-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 700px) {
+      .nomad-problems { grid-template-columns: 1fr !important; }
+      .nomad-solutions { grid-template-columns: 1fr !important; }
+    }
     /* ── Font & size upgrade to match index ── */
     body {
       font-family: 'DM Sans', system-ui, sans-serif !important;
@@ -70,12 +85,12 @@
 
       <div class="nav-menu" id="nav-menu">
         <a  href="/program.html">Cohort</a>
-        <a aria-current="page" href="/about.html">About</a>
-        <a  href="/companies.html">Companies</a>
+        <a  href="/coaching.html" style="white-space:nowrap;">1:1 Coaching</a>
         <a  href="/community.html">Community</a>
         <a  href="/resources.html">Resources</a>
-        <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
-        <a class="btn btn-primary" href="/contact.html">Book a call</a>
+        <a aria-current="page" href="/about.html">About</a>
+        <a class="btn btn-ghost" href="/free-course.html">Free course</a>
+        <a class="btn btn-primary" href="/contact.html" style="color:#ffffff!important;">Book a call</a>
       </div>
     </nav>
   </header>
@@ -126,6 +141,123 @@
 
     <section class="section alt">
       <div class="container">
+        <div class="story-grid" style="display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start;">
+          <div>
+            <p class="eyebrow">The founder</p>
+            <h2>Built by someone who lives it</h2>
+            <p>
+              I'm Gwenaël. I'm autistic, ADHD, HPE, highly sensitive, and hyper-emotional.
+              A creative chaos — mostly under control.
+            </p>
+            <p>
+              I spent a few years working like everyone else in IT. Then I discovered Agile coaching,
+              and started asking a different question: how do you help neurodivergent people
+              the way I needed to be helped — without manipulation, without guilt, without
+              pretending to be someone else?
+            </p>
+            <p>
+              I studied different approaches. I applied what neuroscience and Agile had to offer.
+              Then I kept only what had actually allowed me to live well — without a mask.
+              That became the foundation of everything I teach.
+            </p>
+            <p>
+              After nearly 15 years of coaching, working with 500+ professionals and organizations
+              including the European Commission, Spectrum, and Thales — and 2 years living
+              and working across 9 countries as a digital nomad — I know one thing:
+              the system doesn't need to fit the norm. It needs to fit you.
+            </p>
+            <div style="margin-top:28px;padding:20px 24px;background:rgba(14,122,110,0.07);border-left:3px solid #0E7A6E;border-radius:0 12px 12px 0;">
+              <p style="margin:0;font-style:italic;color:#1a2d42;">"Energy management beats willpower. Strength mapping beats self-improvement. Systems beat discipline. This isn't theory — this is what actually worked for me, and what I help others build."</p>
+              <p style="margin:10px 0 0;font-size:15px;font-weight:600;color:#0E7A6E;">— Gwenaël</p>
+            </div>
+          </div>
+          <div>
+            <div style="border-radius:20px;overflow:hidden;border:1px solid rgba(11,31,58,0.10);box-shadow:0 16px 44px rgba(11,31,58,0.10);">
+              <img src="/assets/founder.png" alt="Gwenaël, founder of Neurodivergent and More" loading="lazy" style="width:100%;height:auto;display:block;" />
+            </div>
+            <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+              <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:12px;padding:14px;text-align:center;">
+                <div style="font-size:26px;font-weight:700;color:#0B1F3A;">15 ans</div>
+                <div style="font-size:13px;color:#4B5F73;margin-top:2px;">de coaching</div>
+              </div>
+              <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:12px;padding:14px;text-align:center;">
+                <div style="font-size:26px;font-weight:700;color:#0B1F3A;">500+</div>
+                <div style="font-size:13px;color:#4B5F73;margin-top:2px;">clients supported</div>
+              </div>
+              <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:12px;padding:14px;text-align:center;">
+                <div style="font-size:26px;font-weight:700;color:#0B1F3A;">9</div>
+                <div style="font-size:13px;color:#4B5F73;margin-top:2px;">countries in 2 years</div>
+              </div>
+              <div style="background:rgba(14,122,110,0.08);border:1px solid rgba(14,122,110,0.18);border-radius:12px;padding:14px;text-align:center;">
+                <div style="font-size:13px;font-weight:700;color:#0E7A6E;line-height:1.4;">Autistic · ADHD<br>HPE · Nomad</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#0B1F3A;">
+      <div class="container">
+        <div style="max-width:820px;margin:0 auto;">
+          <p class="eyebrow" style="color:#0E7A6E;">For people who move</p>
+          <h2 style="color:white;font-size:clamp(30px,4vw,46px);margin-bottom:24px;">Your system keeps breaking every time you move.<br>That's not you. That's the system.</h2>
+          <p style="color:rgba(255,255,255,0.80);font-size:19px;line-height:1.75;margin-bottom:48px;">
+            Most productivity frameworks assume you have a stable address, a fixed routine, and the same timezone every week.
+            If you're a digital nomad — especially a neurodivergent one — you don't.
+            Every move resets your environment, your sleep, your energy, your habits.
+            And most systems collapse with it.
+          </p>
+
+          <div class="nomad-problems" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px;">
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:24px;">
+              <div style="font-size:28px;margin-bottom:12px;">📦</div>
+              <h3 style="color:white;font-size:18px;margin-bottom:10px;">Every move = system restart</h3>
+              <p style="color:rgba(255,255,255,0.65);font-size:16px;line-height:1.65;margin:0;">New city, new routine, new overload. You spend the first two weeks just trying to function — and the system you built is already gone.</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:24px;">
+              <div style="font-size:28px;margin-bottom:12px;">🔋</div>
+              <h3 style="color:white;font-size:18px;margin-bottom:10px;">Constant adaptation drains energy</h3>
+              <p style="color:rgba(255,255,255,0.65);font-size:16px;line-height:1.65;margin:0;">New sounds, new spaces, new social cues. For a neurodivergent brain, adapting costs more than for most people. There's nothing left for actual work.</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:24px;">
+              <div style="font-size:28px;margin-bottom:12px;">🌍</div>
+              <h3 style="color:white;font-size:18px;margin-bottom:10px;">No community that gets it</h3>
+              <p style="color:rgba(255,255,255,0.65);font-size:16px;line-height:1.65;margin:0;">Nomad communities talk about freedom and sunsets. They don't talk about executive function crashes in Chiang Mai or sensory overload in a new coworking space.</p>
+            </div>
+          </div>
+
+          <div style="background:rgba(14,122,110,0.15);border:1px solid rgba(14,122,110,0.30);border-radius:20px;padding:36px;">
+            <p class="eyebrow" style="color:#0E7A6E;margin-bottom:16px;">The solution</p>
+            <h3 style="color:white;font-size:24px;margin-bottom:20px;">Systems that travel with you</h3>
+            <div class="nomad-solutions" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="color:#0E7A6E;font-size:20px;flex-shrink:0;">→</span>
+                <p style="color:rgba(255,255,255,0.80);font-size:17px;margin:0;line-height:1.65;"><strong style="color:white;">Fast-reset routines</strong> — rebuild your baseline in 2–3 days, not 2–3 weeks</p>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="color:#0E7A6E;font-size:20px;flex-shrink:0;">→</span>
+                <p style="color:rgba(255,255,255,0.80);font-size:17px;margin:0;line-height:1.65;"><strong style="color:white;">Energy management for motion</strong> — protect your capacity before, during, and after a move</p>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="color:#0E7A6E;font-size:20px;flex-shrink:0;">→</span>
+                <p style="color:rgba(255,255,255,0.80);font-size:17px;margin:0;line-height:1.65;"><strong style="color:white;">Async-first coaching</strong> — sessions scheduled around your timezone, wherever you are</p>
+              </div>
+              <div style="display:flex;gap:12px;align-items:flex-start;">
+                <span style="color:#0E7A6E;font-size:20px;flex-shrink:0;">→</span>
+                <p style="color:rgba(255,255,255,0.80);font-size:17px;margin:0;line-height:1.65;"><strong style="color:white;">A community that gets it</strong> — nomads who are also neurodivergent, not just optimizing for sunsets</p>
+              </div>
+            </div>
+            <div style="margin-top:28px;">
+              <a href="/contact.html" class="btn btn-primary" style="color:#ffffff!important;">Book a free call →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
         <div class="section-head">
           <h2>What makes the approach different</h2>
           <p class="muted">Three things that separate this from the usual coaching package.</p>
@@ -149,11 +281,85 @@
     </section>
 
     <section class="section">
-      <div class="container narrow">
-        <h2>Credibility without overclaiming</h2>
-        <p>
-          Work connected to organizations including the European Commission, Spectrum think tank, and Thales. Specific project details available when confidentiality allows.
-        </p>
+      <div class="container">
+        <p class="eyebrow">Background &amp; credentials</p>
+        <h2 style="margin-bottom:48px;">15 years. Built from the inside.</h2>
+
+        <!-- TIMELINE -->
+        <div style="position:relative;padding-left:36px;max-width:820px;margin-bottom:72px;">
+          <div style="position:absolute;left:8px;top:6px;width:2px;height:calc(100% - 12px);background:linear-gradient(to bottom,#0E7A6E,rgba(14,122,110,0.10));"></div>
+
+          <div style="position:relative;padding-bottom:40px;">
+            <div style="position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:white;border:2px solid #0E7A6E;"></div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#0E7A6E;margin-bottom:6px;">2009–2016 · IT &amp; Systems</p>
+            <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:8px;">IT, Scrum &amp; Visual Management</h3>
+            <p style="font-size:18px;color:#2c4060;line-height:1.75;">Started in IT, discovered Agile and Scrum. Certified Scrum Master (2016) and Scrum Product Owner (2015). Built first experience with Visual Management as a certified mentor — structured thinking without rigidity.</p>
+          </div>
+
+          <div style="position:relative;padding-bottom:40px;">
+            <div style="position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:white;border:2px solid #0E7A6E;"></div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#0E7A6E;margin-bottom:6px;">2016–2022 · Agile Coaching</p>
+            <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:8px;">Enterprise Agile &amp; Innovation</h3>
+            <p style="font-size:18px;color:#2c4060;line-height:1.75;">Moved into Agile coaching at team and organizational level. Worked with and alongside organizations including the European Commission, Spectrum think tank, and Thales. Started asking how to make Agile genuinely work for neurodivergent people — not just adapt the framework, but rethink the assumptions.</p>
+          </div>
+
+          <div style="position:relative;padding-bottom:40px;">
+            <div style="position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:white;border:2px solid #0E7A6E;"></div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#0E7A6E;margin-bottom:6px;">2023 · ICAgile Certified</p>
+            <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:8px;">ICP-ACC &amp; ICP-EAC — Enterprise Agile Coaching</h3>
+            <p style="font-size:18px;color:#2c4060;line-height:1.75;">Certified by ICAgile as an Agile Coach (ICP-ACC, March 2023) and Enterprise Agile Coach (ICP-EAC, June 2023). The formal validation of work already in practice — focused on executive coaching, organizational change, and individual performance.</p>
+          </div>
+
+          <div style="position:relative;padding-bottom:40px;">
+            <div style="position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:white;border:2px solid #0E7A6E;"></div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#0E7A6E;margin-bottom:6px;">2023–now · Neurodivergent Coaching</p>
+            <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:8px;">Neurodivergent and More — built from lived experience</h3>
+            <p style="font-size:18px;color:#2c4060;line-height:1.75;">Created Neurodivergent and More to combine Agile methods, neuroscience, and NLP (certified 2025) into a coaching approach that works without manipulation, shame, or masking. Not a new framework projected onto a neurodivergent brain — a system built from the inside out, tested on the only person who could verify it: myself.</p>
+          </div>
+
+          <div style="position:relative;">
+            <div style="position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:#0E7A6E;border:2px solid #0E7A6E;"></div>
+            <p style="font-size:12px;font-weight:700;letter-spacing:.10em;text-transform:uppercase;color:#0E7A6E;margin-bottom:6px;">2023–now · Digital Nomad</p>
+            <h3 style="font-size:20px;font-weight:700;color:#0B1F3A;margin-bottom:8px;">2 years · 9 countries · Same systems</h3>
+            <p style="font-size:18px;color:#2c4060;line-height:1.75;">Coaching while moving across 9 countries proved the system works under real constraint — not just in a stable environment. What I teach is what I live. That's not a marketing angle. It's the only quality check I trust.</p>
+          </div>
+        </div>
+
+        <!-- CERTIFICATIONS GRID -->
+        <p class="eyebrow" style="margin-bottom:24px;">Certifications</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;" class="cert-grid">
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">ICAgile · 2023</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">ICP-EAC</p>
+            <p style="font-size:14px;color:#4B5F73;">Enterprise Agile Coaching</p>
+          </div>
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">ICAgile · 2023</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">ICP-ACC</p>
+            <p style="font-size:14px;color:#4B5F73;">Agile Certified Coach</p>
+          </div>
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">LinkedIn · 2025</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">NLP Foundations</p>
+            <p style="font-size:14px;color:#4B5F73;">Neurolinguistic Programming</p>
+          </div>
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">Scrum Institute · 2016</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">Scrum Master</p>
+            <p style="font-size:14px;color:#4B5F73;">Certified Scrum Master</p>
+          </div>
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">Scrum Institute · 2015</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">Scrum Product Owner</p>
+            <p style="font-size:14px;color:#4B5F73;">Accredited Certification</p>
+          </div>
+          <div style="background:white;border:1px solid rgba(11,31,58,0.10);border-radius:16px;padding:20px 24px;">
+            <p style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0E7A6E;margin-bottom:8px;">2015</p>
+            <p style="font-size:17px;font-weight:700;color:#0B1F3A;line-height:1.3;margin-bottom:4px;">Visual Management Mentor</p>
+            <p style="font-size:14px;color:#4B5F73;">Certified Mentor</p>
+          </div>
+        </div>
+
         <div class="notice">
           This work is coaching and skill-building support. It is not medical care, diagnosis, or treatment.
         </div>
