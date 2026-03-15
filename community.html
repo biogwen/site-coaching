@@ -4,146 +4,423 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Community - Neurodivergent and More</title>
-  <meta name="description" content="Exclusive Skool community and optional events. Structured prompts, templates, and accountability without the guilt." />
+  <meta name="description" content="Join the free Skool community for neurodivergent professionals. No upsell. No pressure. Just tools, support, and people who get it." />
 
   <meta property="og:title" content="Community - Neurodivergent and More" />
-  <meta property="og:description" content="Exclusive Skool community and optional events. Structured prompts, templates, and accountability without the guilt." />
+  <meta property="og:description" content="Join the free Skool community for neurodivergent professionals. No upsell. No pressure. Just tools, support, and people who get it." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR_BRAND_DOMAIN.com/community.html" />
-  <meta property="og:image" content="https://YOUR_BRAND_DOMAIN.com/assets/og-image.jpg" />
 
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/styles.css" />
+
   <style>
-    /* Fix: nav btn-primary text must be white */
-    .nav-menu a.btn-primary, .nav-menu .btn-primary, .site-header .btn-primary { color: #ffffff !important; }
-  </style>
-  <style>
-    /* ── Font & size upgrade to match index ── */
-    body {
-      font-family: 'DM Sans', system-ui, sans-serif !important;
-      font-size: 19px;
+    .free-hero {
+      padding: 80px 0 72px;
+      background: linear-gradient(160deg, #0B1F3A 0%, #0F6E66 100%);
+      color: white;
     }
-    h1 {
-      font-family: 'Instrument Serif', Georgia, serif !important;
-      font-size: clamp(40px, 5vw, 64px) !important;
-      letter-spacing: -0.02em;
-      line-height: 1.10;
-    }
-    h2 {
-      font-family: 'DM Sans', system-ui, sans-serif !important;
-      font-size: clamp(28px, 3.5vw, 42px) !important;
+    .free-hero .eyebrow { color: rgba(255,255,255,0.60); }
+    .free-hero h1 { color: white; max-width: 740px; }
+    .free-hero .lead { color: rgba(255,255,255,0.80); max-width: 600px; }
+    .free-hero .fineprint { color: rgba(255,255,255,0.45); }
+
+    .free-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: white;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 28px;
     }
-    h3 {
-      font-family: 'DM Sans', system-ui, sans-serif !important;
-      font-size: 22px !important;
+    .free-badge-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 8px #4ade80;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-stat-number {
+      font-family: var(--font-head);
+      font-size: 34px;
       font-weight: 700;
+      color: white;
+      line-height: 1;
     }
-    p, li, label, select, input, textarea {
-      font-size: 19px;
-      line-height: 1.80;
+    .hero-stat-label {
+      font-size: 13px;
+      color: rgba(255,255,255,0.50);
+      margin-top: 4px;
     }
-    .lead { font-size: 21px !important; }
-    .brand-text { font-family: 'DM Sans', system-ui, sans-serif !important; }
+
+    .btn-white {
+      background: white;
+      color: #0B1F3A;
+      font-weight: 700;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+    }
+    .btn-white:hover { filter: brightness(0.97); }
+
+    .btn-outline-white {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.10); }
+
+    .inside-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 6px 20px rgba(11,31,58,0.06);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .inside-icon {
+      width: 40px; height: 40px;
+      border-radius: 11px;
+      background: rgba(15,110,102,0.10);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+    .inside-item h3 { font-size: 15px; margin-bottom: 4px; }
+    .inside-item p  { font-size: 14px; color: var(--muted); margin: 0; }
+
+    .member-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 12px rgba(11,31,58,0.05);
+    }
+    .member-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+    .member-card strong { color: var(--text); display: block; font-size: 14px; margin-bottom: 2px; }
+
+    .members-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+    .week-sample {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 12px 36px rgba(11,31,58,0.08);
+    }
+    .week-sample-title {
+      font-size: 11px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 16px;
+    }
+    .week-day {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 9px 0; border-bottom: 1px solid rgba(11,31,58,0.07);
+      font-size: 14px; color: var(--muted);
+    }
+    .week-day:last-child { border-bottom: none; }
+    .day-label { font-size: 11px; font-weight: 700; color: var(--muted); min-width: 34px; padding-top: 2px; }
+    .day-tag { display: inline-block; font-size: 10px; font-weight: 700; background: rgba(15,110,102,0.10); color: var(--teal); padding: 2px 7px; border-radius: 999px; margin-right: 5px; }
+
+    .tier-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(11,31,58,0.07);
+    }
+    .tier-card.featured {
+      border-color: var(--teal);
+      background: rgba(15,110,102,0.03);
+    }
+    .tier-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 12px; }
+
+    .irl-features { list-style: none; padding: 0; margin: 14px 0 0; }
+    .irl-features li {
+      display: flex; gap: 10px; padding: 9px 0;
+      border-bottom: 1px solid rgba(11,31,58,0.07);
+      font-size: 14px; color: var(--muted);
+    }
+    .irl-features li:last-child { border-bottom: none; }
+    .irl-features li::before { content: "✓"; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+    @media (max-width: 700px) {
+      .inside-2col { grid-template-columns: 1fr !important; }
+      .hero-stats { gap: 20px; }
+    }
   </style>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+
+  <header class="site-header">
     <nav class="nav container" aria-label="Primary">
       <a class="brand" href="/index.html">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">Neurodivergent and More</span>
       </a>
-
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
         <span class="sr-only">Open menu</span>
         <span class="nav-toggle-bars" aria-hidden="true"></span>
       </button>
-
       <div class="nav-menu" id="nav-menu">
-        <a  href="/program.html">Cohort</a>
-        <a  href="/coaching.html" style="white-space:nowrap;">1:1 Coaching</a>
+        <a href="/program.html">Cohort</a>
+        <a href="/about.html">About</a>
+        <a href="/companies.html">Companies</a>
         <a aria-current="page" href="/community.html">Community</a>
-        <a  href="/resources.html">Resources</a>
-        <a  href="/about.html">About</a>
-        <a class="btn btn-ghost" href="/free-course.html">Free course</a>
-        <a class="btn btn-primary" href="/contact.html" style="color:#ffffff!important;">Book a call</a>
+        <a href="/resources.html">Resources</a>
+        <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
+        <a class="btn btn-primary" href="/contact.html">Book a call</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <section class="page-hero">
+
+    <!-- ══ HERO — FREE COMMUNITY ══ -->
+    <section class="free-hero">
       <div class="container">
-        <p class="eyebrow">Community</p>
-        <h1>A community built for progress — without the noise.</h1>
+        <div class="free-badge">
+          <span class="free-badge-dot"></span>
+          Free · No credit card · Open now
+        </div>
+
+        <p class="eyebrow">Free community on Skool</p>
+        <h1>A free space for neurodivergent to stop masking and start building.</h1>
         <p class="lead">
-          The Skool community is where things you learn turn into things you actually do. Events are optional. No noise. No guilt trips.
+          Join the members who are done fighting their brains. Free tools, real support, and people who get it. No upsell, no pressure, no productivity guru energy.
         </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Book a call</a>
-          <a class="btn btn-ghost" href="/program.html">See the cohort</a>
+
+        <div class="cta-row" style="margin-top:32px;">
+          <a class="btn btn-white" href="https://www.skool.com/nomad-business-academy-2801" target="_blank" rel="noopener">
+            Join free on Skool →
+          </a>
+          <a class="btn btn-outline-white" href="#paid-community">See the full program ↓</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-number">68</div>
+            <div class="hero-stat-label">Members</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">Free</div>
+            <div class="hero-stat-label">Always</div>
+          </div>
+          <div>
+            <div class="hero-stat-number">0</div>
+            <div class="hero-stat-label">Upsell pressure</div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ══ WHAT YOU GET FOR FREE ══ -->
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <h2>What happens inside Skool</h2>
-          <p class="muted">Built to be usable on a hard week, not just a good one.</p>
+          <h2>What you get for free</h2>
+          <p class="muted">One theme at a time. Low overwhelm. Re-entry always welcome.</p>
         </div>
 
-        <div class="grid-3">
-          <div class="card"><h3>Weekly focus prompts</h3><p>One theme. One practice. One real-life application.</p></div>
-          <div class="card"><h3>Templates that reduce thinking</h3><p>Energy map, minimum timebox, week map, decision hygiene, recovery rules.</p></div>
-          <div class="card"><h3>Accountability without guilt</h3><p>Small wins count. Dropping off and coming back is normal. Consistency beats intensity.</p></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;" class="inside-2col">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div class="inside-item">
+              <div class="inside-icon">🎯</div>
+              <div><h3>Weekly focus theme</h3><p>One concept. One practice. No overload.</p></div>
+            </div>
+            <div class="inside-item">
+              <div class="inside-icon">📋</div>
+              <div><h3>Practical templates</h3><p>Energy map, minimum timebox, decision hygiene. Fill in, don't design, no overwhelming.</p></div>
+            </div>
+            <div class="inside-item">
+              <div class="inside-icon">🔄</div>
+              <div><h3>Shame-free accountability</h3><p>Small wins count. Re-entry is always normal.</p></div>
+            </div>
+            <div class="inside-item">
+              <div class="inside-icon">💬</div>
+              <div><h3>Peer support</h3><p>Real people. No toxic positivity. No guru.</p></div>
+            </div>
+            <div class="inside-item">
+              <div class="inside-icon">📍</div>
+              <div><h3>Founder input</h3><p>Questions answered. Not a ghost ship.</p></div>
+            </div>
+            <div class="inside-item">
+              <div class="inside-icon">🗂️</div>
+              <div><h3>Resource library</h3><p>Energy, focus, execution, work design.</p></div>
+            </div>
+          </div>
+
+          <div class="week-sample">
+            <div class="week-sample-title">A typical week inside</div>
+            <div class="week-day">
+              <div class="day-label">MON</div>
+              <div><span class="day-tag">Theme</span>This week: energy mapping. One post, one reflection question.</div>
+            </div>
+            <div class="week-day">
+              <div class="day-label">TUE</div>
+              <div><span class="day-tag">Template</span>The weekly energy map — 10 minutes to plan around your real capacity.</div>
+            </div>
+            <div class="week-day">
+              <div class="day-label">WED</div>
+              <div><span class="day-tag">Check-in</span>One-line prompt: what did your energy map reveal?</div>
+            </div>
+            <div class="week-day">
+              <div class="day-label">FRI</div>
+              <div><span class="day-tag">Win log</span>Share one win — any size. Starting again counts.</div>
+            </div>
+            <div class="week-day">
+              <div class="day-label">SUN</div>
+              <div><span class="day-tag">Open Q&amp;A</span>Drop questions. Answered by Monday.</div>
+            </div>
+          </div>
         </div>
 
-        <div class="notice">
-          The community is included with the cohort. Standalone access may be available depending on your situation.
+        <div style="text-align:center;margin-top:40px;">
+          <a class="btn btn-primary" href="https://www.skool.com/nomad-business-academy-2801" target="_blank" rel="noopener">Join free on Skool →</a>
+          <p class="fineprint" style="margin-top:10px;">Free. No credit card.</p>
         </div>
       </div>
     </section>
 
+    <!-- ══ WHO IS INSIDE ══ -->
     <section class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2>IRL events</h2>
-          <p class="muted">Optional. Clear agenda. Low pressure.</p>
+          <h2>Who's already inside</h2>
+          <p class="muted">Not a general self-improvement group. People whose brains work like yours.</p>
         </div>
 
-        <div class="grid-2">
-          <div class="card"><h3>Meetups</h3><p>Small group meetups for connection, not performance.</p></div>
-          <div class="card"><h3>Workshops</h3><p>Hands-on sessions for energy management, focus systems, and work design.</p></div>
+        <div class="members-strip">
+          <div class="member-card">
+            <div class="member-dot"></div>
+            <div><strong>ADHD professionals</strong>Managing energy, focus, and follow-through at work</div>
+          </div>
+          <div class="member-card">
+            <div class="member-dot"></div>
+            <div><strong>Autistic employees</strong>Building structure and managing sensory load</div>
+          </div>
+          <div class="member-card">
+            <div class="member-dot"></div>
+            <div><strong>HSP &amp; HPE people</strong>Protecting capacity and designing around depth</div>
+          </div>
+          <div class="member-card">
+            <div class="member-dot"></div>
+            <div><strong>Freelancers</strong>Consistent delivery without the last-minute panic</div>
+          </div>
+          <div class="member-card">
+            <div class="member-dot"></div>
+            <div><strong>9-5 escapees</strong>Moving toward work that fits how their brain works</div>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:28px;">
+          No diagnosis required. If the patterns resonate, you belong here.
         </div>
       </div>
     </section>
 
+    <!-- ══ IRL EVENTS ══ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>IRL events</h2>
+          <p class="muted">Optional. Clear agenda in advance. Early exit always okay.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <p style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a6200;margin-bottom:12px;">📍 In person</p>
+            <h3>Meetups</h3>
+            <p style="color:var(--muted);">Small group gatherings — 6 to 12 people max. Connection without performance pressure.</p>
+            <ul class="irl-features">
+              <li>Structured conversation, not free-for-all</li>
+              <li>Agenda shared in advance</li>
+              <li>Early exit always okay, no guilt</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8a6200;margin-bottom:12px;">🛠 Hands-on</p>
+            <h3>Workshops</h3>
+            <p style="color:var(--muted);">Practical sessions on specific tools. You leave with something built, not just something heard.</p>
+            <ul class="irl-features">
+              <li>Energy mapping and week design</li>
+              <li>Focus systems and environment setup</li>
+              <li>Work design and strengths mapping</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PAID TIER — secondary ══ -->
+    <section class="section alt" id="paid-community">
+      <div class="container narrow">
+        <div class="section-head">
+          <h2>Want more structure and coaching?</h2>
+          <p class="muted">The free community is the starting point. The full program goes deeper.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="tier-card featured">
+            <p class="tier-label" style="color:var(--teal);">⭐ Recommended</p>
+            <h3>8-week cohort</h3>
+            <p style="color:var(--muted);margin-bottom:20px;">The full program: weekly live sessions, 1:1 coaching every 2 weeks, paid community, templates, and a complete neurodivergent OS.</p>
+            <ul class="bullets" style="margin-top:0;margin-bottom:24px;">
+              <li>Weekly live sessions — recordings available</li>
+              <li>1:1 coaching every 2 weeks</li>
+              <li>Exclusive paid community included</li>
+              <li>Lightweight tracking — progress visible</li>
+            </ul>
+            <a class="btn btn-primary" href="/program.html" style="width:100%;justify-content:center;">See the cohort →</a>
+          </div>
+
+          <div class="tier-card">
+            <p class="tier-label" style="color:var(--muted);">Also available</p>
+            <h3>Standalone community access</h3>
+            <p style="color:var(--muted);margin-bottom:20px;">Access to the full paid community without the cohort. Templates, prompts, coaching touchpoints, accountability — without the live sessions.</p>
+            <p class="fineprint" style="margin-bottom:24px;">Ask on a call. We check fit first.</p>
+            <a class="btn btn-ghost" href="/contact.html" style="width:100%;justify-content:center;">Book a call →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CTA BAND ══ -->
     <section class="cta-band">
       <div class="container cta-band-inner">
         <div>
-          <h2>Not sure what fits?</h2>
-          <p class="muted">Book a call and we work out what makes sense.</p>
+          <h2>Start free. Go further when it's right.</h2>
+          <p class="muted">The free community is always open. No pressure to do more.</p>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/contact.html">Book a call</a>
-          <a class="btn btn-ghost" href="/free-course.html">Free email course</a>
+          <a class="btn btn-primary" href="https://www.skool.com/nomad-business-academy-2801" target="_blank" rel="noopener">Join free on Skool</a>
+          <a class="btn btn-ghost" href="/contact.html">Book a call</a>
         </div>
       </div>
     </section>
 
   </main>
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <div class="brand footer-brand">
@@ -152,7 +429,6 @@
         </div>
         <p class="muted">Coaching and skill-building support for neurodivergent professionals. Not medical care.</p>
       </div>
-
       <div class="footer-links">
         <a href="/program.html">Cohort</a>
         <a href="/companies.html">Companies</a>
@@ -161,7 +437,6 @@
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
       </div>
-
       <div class="footer-links">
         <a href="/free-course.html">Free email course</a>
         <a href="/legal/privacy.html">Privacy</a>
@@ -169,7 +444,6 @@
         <a href="/legal/cookies.html">Cookies</a>
       </div>
     </div>
-
     <div class="container footer-bottom">
       <p class="fineprint">© <span id="year"></span> Neurodivergent and More. All rights reserved.</p>
     </div>
